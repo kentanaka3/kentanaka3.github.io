@@ -1,1 +1,0 @@
-# kentanaka3.github.io
