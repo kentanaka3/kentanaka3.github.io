@@ -12,7 +12,7 @@
 
 	// Tunable flocking constants. Keeping them grouped makes it easy to balance motion later.
 	const SPEED_BOOST = 2;
-	const FISH_COUNT = 100;
+	const FISH_COUNT = Math.max(100, Math.min(250, Math.floor((window.innerWidth * window.innerHeight) / 9000)));
 	const FISH_COLOR = "#00e468";
 	const NEIGHBOR_RADIUS = 100;
 	const SEPARATION_RADIUS = 25;
@@ -268,3 +268,87 @@
 	};
 	fishBitmap.src = "img/fish.png";
 })();
+
+	(() => {
+		const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+		const panel = document.querySelector(".info-panel");
+		if (navLinks.length === 0 || !panel) return;
+		const toggleButton = document.querySelector(".panel-toggle");
+		const page = document.body;
+
+		const eyebrow = panel.querySelector(".info-eyebrow");
+		const title = panel.querySelector(".info-title");
+		const body = panel.querySelector(".info-body");
+		const hiddenSections = Array.from(document.querySelectorAll(".main-hidden [data-section]"));
+		const contentMap = hiddenSections.reduce((acc, section) => {
+			const key = section.dataset.section;
+			if (!key) return acc;
+			acc[key] = {
+				eyebrow: section.querySelector(".info-eyebrow")?.textContent || "",
+				title: section.querySelector(".info-title")?.textContent || "",
+				body: section.querySelector(".info-body")?.innerHTML || "",
+			};
+			return acc;
+		}, {});
+
+		let lastSection = null;
+
+		const setActive = (target) => {
+			navLinks.forEach((link) => link.classList.remove("active"));
+			if (target) target.classList.add("active");
+		};
+
+		const updatePanel = (sectionKey) => {
+			const content = contentMap[sectionKey];
+			if (!content) return;
+			if (eyebrow) eyebrow.textContent = content.eyebrow;
+			if (title) title.textContent = content.title;
+			if (body) body.innerHTML = content.body;
+		};
+
+		const togglePanel = (shouldShow) => {
+			panel.classList.toggle("is-hidden", !shouldShow);
+		};
+
+		const setSidebarState = (isCollapsed) => {
+			page.classList.toggle("is-collapsed", isCollapsed);
+			if (!toggleButton) return;
+			toggleButton.setAttribute("aria-pressed", String(isCollapsed));
+			toggleButton.setAttribute(
+				"aria-label",
+				isCollapsed ? "Expand sidebar" : "Collapse sidebar"
+			);
+			const icon = toggleButton.querySelector(".panel-toggle-icon");
+			if (icon) {
+				icon.textContent = isCollapsed ? "⟩" : "⟨";
+			}
+			window.dispatchEvent(new Event("resize"));
+		};
+
+		navLinks.forEach((link) => {
+			link.addEventListener("click", (event) => {
+				event.preventDefault();
+				const sectionKey = link.dataset.section;
+				const isSameSection = lastSection === sectionKey;
+				const isHidden = panel.classList.contains("is-hidden");
+				const shouldShow = !isSameSection || isHidden;
+				setActive(link);
+				updatePanel(sectionKey);
+				togglePanel(shouldShow);
+				lastSection = sectionKey;
+			});
+		});
+
+		if (toggleButton) {
+			toggleButton.addEventListener("click", () => {
+				const isCollapsed = page.classList.contains("is-collapsed");
+				setSidebarState(!isCollapsed);
+			});
+			setSidebarState(page.classList.contains("is-collapsed"));
+		}
+
+		setActive(navLinks[0]);
+		updatePanel(navLinks[0].dataset.section);
+		togglePanel(false);
+		lastSection = navLinks[0].dataset.section;
+	})();
