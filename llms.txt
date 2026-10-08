@@ -1,80 +1,63 @@
 # Ken Tanaka Hernández
 
-> Curriculum vitae and portfolio of Ken Tanaka Hernández (田中 健), a PhD researcher and HPC & AI engineer specializing in scientific computing, distributed systems, and seismic monitoring.
-
-## Primary sources
-
-- [Semantic CV](https://kentanaka3.github.io/): Full professional profile in static HTML, with ProfilePage and Person JSON-LD. The CV is readable without JavaScript.
-- [Structured CV](https://kentanaka3.github.io/data/cv.json): Contact details, work experience, education, skills, languages, projects, publications, conferences, datasets, awards, volunteering, and interests. Dates preserve their original precision; ongoing roles and studies have a null end date.
-- [PDF CV](https://kentanaka3.github.io/cv.pdf): Downloadable formatted curriculum vitae.
-
-## Profile summary
-
-- Current role: PhD Researcher at Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) and Università degli Studi di Trieste (UniTS), since November 2023.
-- PhD: Applied Data Science & Artificial Intelligence (ADSAI) at UniTS; in progress, with expected graduation in October 2026.
-- Qualifications: Master in High Performance Computing (MHPC) at Scuola Internazionale Superiore di Studi Avanzati (SISSA) (with honors); Postgraduate Diploma in Quantitative Life Science (QLS) at the Abdus Salam International Centre for Theoretical Physics (ICTP); BSc. Physics at Universidad de Guadalajara (UDG).
-- Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO) BEng. Nanotechnology studies were coursework only.
-- Experience: Software Developer II at Oracle; modeling and numerical simulation internship at Hewlett-Packard (HP) Labs; computational physics research assistantship at UDG.
-- Expertise: HPC, Big Data, distributed systems, physics-informed AI, scientific ML, data engineering, backend architecture, MLOps, parallel algorithms, and API design.
-- Location: Guadalajara, Mexico. The current research role is based in Trieste, Italy.
-- Contact: kentanaka3@outlook.com.
-
-## CV sections
-
-- [Experience](https://kentanaka3.github.io/#experience)
-- [Education](https://kentanaka3.github.io/#education)
-- [Technical skills](https://kentanaka3.github.io/#skills)
-- [Languages](https://kentanaka3.github.io/#languages)
-- [Projects](https://kentanaka3.github.io/#projects)
-- [Publications](https://kentanaka3.github.io/#publications): Published work and manuscripts in preparation are identified separately.
-- [Conferences](https://kentanaka3.github.io/#conferences)
-- [Datasets](https://kentanaka3.github.io/#datasets): The revised OGS catalog is forthcoming, not yet listed as published.
-- [Honors and awards](https://kentanaka3.github.io/#certifications)
-- [Volunteering](https://kentanaka3.github.io/#volunteering)
-
-## External profiles
-
-- [GitHub](https://github.com/kentanaka3)
-- [LinkedIn](https://www.linkedin.com/in/kentanaka3)
-
-
 > PhD Researcher | HPC & AI Engineer | Scientific Computing
 
 Ken Tanaka Hernández (田中 健) is a researcher with a background in physics,
 mathematics, and computer science, building scalable platforms with HPC,
-Big Data, and AI. His current work focuses on distributed scientific workflows,
-physics-informed AI, and automated seismic monitoring.
+Big Data, and AI. His work focuses on distributed systems, parallel scientific
+workflows, physics-informed AI, and automated seismic monitoring.
 
-He is a PhD Researcher at the University of Trieste (UniTS) and OGS, Italy,
-since November 2023. His PhD in Applied Data Science & Artificial Intelligence
-(ADSAI) is in progress, with expected graduation in October 2026. He completed
-a Master in High Performance Computing (MHPC) at SISSA with honors and studied
-Quantitative Life Science (QLS) at ICTP and Physics at UDG.
-His BEng. Nanotechnology studies at ITESO were coursework, not a completed
-degree.
+## Primary sources
 
-Previous roles include Software Developer II at Oracle, a modeling and
-numerical simulation internship at HP Labs, and a research assistantship at
-UDG.
+- [Portfolio and CV](https://kentanaka3.github.io/): Full professional profile in static HTML with Schema.org ProfilePage and Person JSON-LD. CV content is readable without JavaScript.
+- [Structured CV](https://kentanaka3.github.io/data/cv.json): Manually maintained export of the LaTeX CV, containing contact details, experience, education, skills, languages, projects, publications, conferences, datasets, awards, volunteering, and interests. Dates preserve their original precision; ongoing roles and studies have a null end date.
+- [PDF CV](https://kentanaka3.github.io/cv.pdf): Formatted curriculum vitae compiled from the LaTeX source.
 
-## CV resources
+## Profile summary
 
-- [Structured CV (JSON)](https://kentanaka3.github.io/data/cv.json): Contact details, dated experience and education, technical skills, languages, projects, publications, conferences, datasets, awards, volunteering, and interests.
-- [Portfolio and CV (HTML)](https://kentanaka3.github.io/): Static semantic HTML with an embedded Schema.org ProfilePage and Person. CV facts are available without JavaScript.
-- [CV (PDF)](https://kentanaka3.github.io/cv.pdf): Formatted curriculum vitae.
+- Current role: PhD Researcher at Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) and Università degli Studi di Trieste (UniTS), Trieste, Italy, since November 2023.
+- Research: Automated HPC seismic processing with SLURM, MPI, GPU parallelization, SeisBench, PyOcto, and NonLinLoc; reproducible workflows using GNU Make and Hydra; 94% detection accuracy on production seismic workloads across Italy's northeastern national seismic network.
+- Previous experience: Software Developer II at ORACLE de México (July 2020–August 2022); modeling and numerical simulation internship at HP Labs (June 2019–June 2020); Research Assistant at Universidad de Guadalajara (April 2018–June 2020).
+- Location: Guadalajara, Mexico; the current research role is based in Trieste, Italy.
+- Contact: kentanaka3@outlook.com.
 
-## Professional sections
+## Education
+
+- PhD in Applied Data Science & Artificial Intelligence (ADSAI), UniTS, November 2023–present. In progress, with expected graduation in October 2026; concurrent with MHPC studies.
+- Master in High Performance Computing (MHPC), SISSA, September 2023–August 2024. Graduated with honors; concurrent with PhD studies.
+- Postgraduate Diploma in Quantitative Life Science (QLS), ICTP, September 2022–August 2023. Research on Approximate Message Passing, rank-one estimation, and a prior-independent scheduler for the Onsager correction term.
+- BSc. Physics, Universidad de Guadalajara, August 2016–December 2021. Graduated with postgraduate studies; research on Ising-based social dynamics and finite-size scaling.
+- BEng. Nanotechnology studies, ITESO, August 2016–December 2018. Coursework only, not a completed degree; concurrent with BSc studies.
+
+## Research outputs
+
+- Published article: “Insights into a Deep Learning Workflow for Automatic Detection of Seismic Signals at Mount Etna Volcano,” Seismological Research Letters (2026). DOI: [10.1785/0220250431](https://doi.org/10.1785/0220250431).
+- Manuscript in preparation: “Evaluating an AI-enabled HPC workflow for seismic monitoring in the Southeastern Alps.” The author list in the CV is abbreviated.
+- Manuscript in preparation: “Comparative Evaluation of Clustering Algorithms for Seismic Event Association: Assessing their suitability for reliable event association.”
+- Published dataset: “Revised OGS Seismic Catalog for Northern Italy (2005–2024): Quality-Controlled, Homogeneous Dataset for Seismological and Machine Learning Applications.” Magrin, A.; Tanaka Hernández, K.; Sugan, M. Zenodo (2026), version 1.0. DOI: [10.5281/zenodo.22106548](https://doi.org/10.5281/zenodo.22106548).
+- Conference contributions: EGU General Assembly 2026, GNGTS 2026, and MICAI 2025 Doctoral Consortium. Full titles, authors, dates, and locations are available in the HTML and structured CV.
+
+## Skills and languages
+
+- Expertise: HPC, Big Data, distributed systems, mathematical modeling, physics-informed AI, scientific ML, data engineering, backend architecture, MLOps, parallel algorithms, and API design.
+- Programming: Python (NumPy, SciPy, Pandas, PyTorch, TensorFlow, CuPy, Dask), C/C++, SQL (PostgreSQL, Oracle), JavaScript/TypeScript, and advanced Bash.
+- HPC: SLURM, MPI/MPICH, OpenMP, OpenACC, CUDA; CINECA Galileo100 and Leonardo; ICTP Ulysses.
+- Seismology: SeisBench, NonLinLoc, PyOcto, REAL, waveform processing, phase picking, station metadata, and seismic catalogs.
+- Languages: Spanish (native), English (C1), Italian (A2), Japanese (conversational), Chinese (A1).
+
+## CV sections
 
 - [Professional summary](https://kentanaka3.github.io/#summary)
-- [Work experience](https://kentanaka3.github.io/#experience)
+- [Experience](https://kentanaka3.github.io/#experience)
 - [Education](https://kentanaka3.github.io/#education)
-- [Technical skills and languages](https://kentanaka3.github.io/#skills)
+- [Technical skills](https://kentanaka3.github.io/#skills)
+- [Languages](https://kentanaka3.github.io/#languages)
 - [Selected projects](https://kentanaka3.github.io/#projects)
 - [Publications](https://kentanaka3.github.io/#publications): Published work is distinguished from manuscripts in preparation.
 - [Conferences](https://kentanaka3.github.io/#conferences)
-- [Datasets](https://kentanaka3.github.io/#datasets): Forthcoming data is not presented as already released.
-- [Awards and certifications](https://kentanaka3.github.io/#certifications)
-- [Volunteering](https://kentanaka3.github.io/#volunteering)
+- [Datasets](https://kentanaka3.github.io/#datasets)
+- [Honors and awards](https://kentanaka3.github.io/#certifications): TeRABIT Scholarship (OGS, 2023–2024), Postgraduate Diploma Fellowship (ICTP, 2022–2023), and 3rd Place in the National Poster Presentation Contest (HP, 2020).
+- [Volunteering](https://kentanaka3.github.io/#volunteering): ISC High Performance, UGA, UdeG science outreach, HP Hour of Code, and AEM.
 - [Hobbies and interests](https://kentanaka3.github.io/#interests)
 - [Contact](https://kentanaka3.github.io/#contact)
 
@@ -85,6 +68,6 @@ UDG.
 
 ## Context
 
-The portfolio also hosts Flock / Field Study, a browser-only interactive
-canvas experiment. It is not an AI service or a source of biographical facts.
-The CV JSON and this overview are manually maintained exports of the CV.
+The portfolio also hosts a browser-only animated fish canvas. It is not an AI
+service or a source of biographical facts. The HTML, structured CV, and this
+guide are manually maintained and should remain consistent with the LaTeX CV.

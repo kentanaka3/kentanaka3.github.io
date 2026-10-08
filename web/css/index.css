@@ -46,6 +46,10 @@ body::before {
 }
 
 .panel-toggle {
+    display: none;
+}
+
+.is-enhanced .panel-toggle {
     width: 38px;
     height: 100vh;
     background: linear-gradient(180deg, rgba(228, 0, 124, 0.12), rgba(5, 10, 25, 0.95));
@@ -83,6 +87,7 @@ body::before {
     flex-shrink: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
     gap: 18px;
+    overflow-y: auto;
     backdrop-filter: blur(12px);
     box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
 }
@@ -152,15 +157,29 @@ body.is-collapsed .left-panel * {
 .main-content {
     flex: 1;
     background-color: #02050a;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
 }
 
-.main-hidden {
+.cv-content {
+    position: relative;
+    padding: 28px;
+    z-index: 1;
+}
+
+.is-enhanced .main-content {
+    overflow: hidden;
+}
+
+.is-enhanced .cv-content {
     display: none;
 }
 
 #fishtank {
+    display: none;
+}
+
+.is-enhanced #fishtank {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -186,6 +205,11 @@ body.is-collapsed .left-panel * {
 }
 
 .info-panel {
+    display: none;
+}
+
+.is-enhanced .info-panel {
+    display: block;
     position: absolute;
     top: 28px;
     left: 28px;
@@ -203,9 +227,12 @@ body.is-collapsed .left-panel * {
     transform: translateY(0);
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: auto;
+    max-height: calc(100% - 56px);
+    overflow-y: auto;
 }
 
 .info-panel.is-hidden {
+    visibility: hidden;
     opacity: 0;
     transform: translateY(12px) scale(0.99);
     pointer-events: none;
@@ -260,6 +287,39 @@ body.is-collapsed .left-panel * {
     font-weight: 600;
 }
 
+.left-panel a {
+    color: var(--accent);
+}
+
+.info-body h3 {
+    color: var(--text);
+    margin: 0 0 8px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.info-body article + article,
+.info-body .publication-status {
+    margin-top: 28px;
+}
+
+.info-body p {
+    margin: 0 0 12px;
+}
+
+.info-body dt {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.info-body dd {
+    margin: 0 0 16px;
+}
+
+.info-body a {
+    overflow-wrap: anywhere;
+}
+
 .card {
     background: rgba(15, 30, 60, 0.4);
     padding: 30px;
@@ -307,12 +367,13 @@ p {
         border-bottom: none;
     }
 
-    .main-content {
+    .main-content,
+    .is-enhanced .main-content {
         min-height: 70vh;
         overflow: auto;
     }
 
-    .info-panel {
+    .is-enhanced .info-panel {
         position: relative;
         top: 0;
         left: auto;

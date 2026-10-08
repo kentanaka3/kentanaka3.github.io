@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source_file": "doc/cv.tex",
-    "exported_on": "2026-09-30",
+    "exported_on": "2026-10-08",
     "date_format": "YYYY-MM for month precision; YYYY-MM-DD when a day is specified",
     "notes": [
       "Ongoing roles and studies have a null end_date.",
@@ -449,14 +449,19 @@
   ],
   "datasets": [
     {
-      "title": "Revised OGS Seismic Catalog for Northern Italy (2005-2024) Using 1D Velocity Model with NonLinLoc: Quality-controlled, homogeneous dataset for seismological and machine learning applications",
+      "title": "Revised OGS Seismic Catalog for Northern Italy (2005–2024): Quality-Controlled, Homogeneous Dataset for Seismological and Machine Learning Applications",
       "authors": [
         "Magrin, A.",
         "Tanaka Hernández, K.",
         "Sugan, M."
       ],
       "repository": "Zenodo",
-      "status": "forthcoming"
+      "year": 2026,
+      "publication_date": "2026-08-26",
+      "version": "1.0",
+      "status": "published",
+      "doi": "10.5281/zenodo.22106548",
+      "url": "https://doi.org/10.5281/zenodo.22106548"
     }
   ],
   "honors_and_awards": [

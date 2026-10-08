@@ -3,101 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ken Tanaka Hernández · Portfolio</title>
+    <meta name="description" content="Ken Tanaka Hernández — PhD Researcher, HPC &amp; AI Engineer, and scientific computing specialist. Experience, education, publications, and research datasets.">
+    <title>Ken Tanaka Hernández · Portfolio &amp; CV</title>
+    <link rel="canonical" href="https://kentanaka3.github.io/">
+    <link rel="alternate" type="application/json" href="data/cv.json" title="Structured CV">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="web/css/index.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://kentanaka3.github.io/#profile",
+        "url": "https://kentanaka3.github.io/",
+        "mainEntity": {
+            "@type": "Person",
+            "@id": "https://kentanaka3.github.io/#person",
+            "name": "Ken Tanaka Hernández",
+            "givenName": "Ken",
+            "familyName": "Tanaka Hernández",
+            "alternateName": "田中健",
+            "description": "PhD Researcher | HPC & AI Engineer | Scientific Computing",
+            "jobTitle": "PhD Researcher",
+            "email": "mailto:kentanaka3@outlook.com",
+            "url": "https://kentanaka3.github.io/",
+            "sameAs": ["https://github.com/kentanaka3", "https://www.linkedin.com/in/kentanaka3"],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Guadalajara",
+                "addressCountry": "Mexico"
+            },
+            "worksFor": [
+                {"@type": "Organization", "name": "Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS)"},
+                {"@type": "CollegeOrUniversity", "name": "Università degli Studi di Trieste (UniTS)"}
+            ],
+            "alumniOf": [
+                {"@type": "CollegeOrUniversity", "name": "Scuola Internazionale Superiore di Studi Avanzati (SISSA)"},
+                {"@type": "EducationalOrganization", "name": "International Centre for Theoretical Physics (ICTP)"},
+                {"@type": "CollegeOrUniversity", "name": "Universidad de Guadalajara (UdeG)"}
+            ],
+            "knowsAbout": ["HPC", "Big Data", "Distributed Systems", "Mathematical Modeling", "Physics-Informed AI", "Scientific ML", "Data Engineering", "Backend Architecture", "MLOps", "Parallel Algorithms", "API Design"]
+        }
+    }
+    </script>
 </head>
 <body>
-
     <aside class="left-panel">
         <h1 class="info-title">Ken Tanaka Hernández</h1>
-        <nav>
+        <nav aria-label="CV sections">
             <ul>
                 <li><a class="nav-link" href="#summary" data-section="summary">Professional Summary</a></li>
                 <li><a class="nav-link" href="#experience" data-section="experience">Experience</a></li>
                 <li><a class="nav-link" href="#education" data-section="education">Education</a></li>
                 <li><a class="nav-link" href="#skills" data-section="skills">Skills</a></li>
+                <li><a class="nav-link" href="#languages" data-section="languages">Languages</a></li>
                 <li><a class="nav-link" href="#projects" data-section="projects">Projects</a></li>
                 <li><a class="nav-link" href="#publications" data-section="publications">Publications</a></li>
                 <li><a class="nav-link" href="#conferences" data-section="conferences">Conferences</a></li>
                 <li><a class="nav-link" href="#datasets" data-section="datasets">Datasets</a></li>
-                <li><a class="nav-link" href="#certifications" data-section="certifications">Honors & Awards</a></li>
+                <li><a class="nav-link" href="#certifications" data-section="certifications">Honors &amp; Awards</a></li>
                 <li><a class="nav-link" href="#volunteering" data-section="volunteering">Volunteering</a></li>
+                <li><a class="nav-link" href="#interests" data-section="interests">Interests</a></li>
                 <li><a class="nav-link" href="#contact" data-section="contact">Contact</a></li>
             </ul>
         </nav>
+        <p><a href="cv.pdf">Download CV (PDF)</a></p>
     </aside>
     <button class="panel-toggle" type="button" aria-label="Collapse sidebar" aria-pressed="false">
         <span class="panel-toggle-icon">⟨</span>
     </button>
 
     <main class="main-content">
-        <div class="main-hidden" aria-hidden="true">
-            <section class="card" data-section="summary">
-                <span class="info-eyebrow">Executive Summary</span>
-                <p class="info-body">
-                    <strong>Big Data Specialist · HPC Engineer · Applied Scientist</strong><br />Tech executive and problem solver specializing in turning complex research into real-world products. Background across <strong>Physics, Math, and Computer Science</strong>, building scalable platforms with <strong>HPC, Big Data, and AI</strong>.<br /><br />Domain focus: Architecting distributed systems and parallel workflows for high-throughput research and enterprise workloads. Leadership focus: Translating academic research into production systems, roadmaps, and stakeholder value. Expertise focus: Physics-informed AI for trustworthy, explainable, and robust predictions. Strategy focus: Platform architecture with resilient backends, APIs, and data governance.
-                </p>
+        <div class="cv-content">
+            <section class="card" id="summary" data-section="summary">
+                <span class="info-eyebrow">Professional Summary</span>
+                <h2 class="info-title">PhD Researcher · HPC &amp; AI Engineer · Scientific Computing</h2>
+                <div class="info-body">
+                    <p>Researcher specializing in turning complex research into real-world products. Background across <strong>physics, mathematics, and computer science</strong>, building scalable platforms with <strong>HPC, Big Data, and AI</strong>. Architecting <strong>distributed systems</strong> and <strong>parallel workflows</strong> for high-throughput research and enterprise workloads. Translating academic research into production systems, roadmaps, and stakeholder value with expertise in <strong>physics-informed AI</strong> for trustworthy, explainable, and robust predictions.</p>
+                    <blockquote>“We are a way for the cosmos to know itself.” — Carl Sagan, <cite>Cosmos: A Personal Journey</cite> (1980)</blockquote>
+                </div>
             </section>
 
-            <section class="card" data-section="experience">
+            <section class="card" id="experience" data-section="experience">
                 <span class="info-eyebrow">Experience</span>
-                <h1 class="info-title">Applied engineering leadership</h1>
-                <p class="info-body">
-                    <strong>PhD Researcher · University of Trieste & OGS</strong> (Nov 2023 - Present · Trieste, Italy) — Development of distributed deep learning pipelines for seismic event detection across Italy's national monitoring network. Designed and implemented multi-node GPU training infrastructure. Achieved 94% detection accuracy on production workloads. Collaborating with seismologists.<br /><br /><strong>Software Developer II · ORACLE</strong> (Jul 2020 - Aug 2022 · Guadalajara, Mexico) — Architected and deployed a production backend for automated analytics through a customer-facing API. Engineered automated patch recommendation workflows that reduced diagnostic latency and improved system reliability. Mentored junior developers and established code review practices.<br /><br /><strong>Internship, Modeling & Numerical Simulation in Additive Manufacturing · HP Labs</strong> (Jun 2019 - Jun 2020 · Guadalajara, Mexico) — Developed thermal-process simulations for Multi Jet Fusion 3D printing technology. Validated computational models against experimental materials-science benchmarks.<br /><br /><strong>Research Assistant · Universidad de Guadalajara</strong> (Jan 2018 - May 2019 · Guadalajara, Mexico) — Conducted computational physics research on complex systems and statistical mechanics. Developed Monte Carlo simulations for phase transition analysis in social dynamics models.
-                </p>
+                <h2 class="info-title">Research &amp; Engineering</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>PhD Researcher</h3>
+                        <p><strong>Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) &amp; Università degli Studi di Trieste (UniTS)</strong><br>Trieste, Italy · <time datetime="2023-11">Nov 2023</time> – Present</p>
+                        <ul>
+                            <li>Developed automated seismic data processing pipelines on <strong>HPC clusters</strong> using <strong>SLURM, MPI, and GPU parallelization</strong>.</li>
+                            <li>Implemented <strong>ML-based earthquake detection</strong> workflows integrating <strong>SeisBench, PyOcto, and NonLinLoc</strong>.</li>
+                            <li>Created dynamic job submission systems that allocated workloads across compute nodes with <strong>32+ cores/node</strong>.</li>
+                            <li>Designed reproducible scientific workflows using <strong>GNU Make and Hydra</strong> configuration frameworks.</li>
+                            <li>Achieved <strong>94% detection accuracy</strong> on production seismic workloads across Italy's northeastern national seismic network.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Software Developer II</h3>
+                        <p><strong>ORACLE de México, SA de CV</strong><br>Guadalajara, Mexico · <time datetime="2020-07">Jul 2020</time> – <time datetime="2022-08">Aug 2022</time></p>
+                        <ul>
+                            <li>Architected and deployed a <strong>production backend</strong> for automated analytics through a customer-facing API.</li>
+                            <li>Engineered automated patch recommendation workflows to streamline customer-facing diagnostic analysis.</li>
+                            <li>Mentored junior developers and established <strong>code review practices</strong>.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Intern, Modeling &amp; Numerical Simulation</h3>
+                        <p><strong>Hewlett Packard (HP) Labs</strong><br>Guadalajara, Mexico · <time datetime="2019-06">Jun 2019</time> – <time datetime="2020-06">Jun 2020</time></p>
+                        <ul>
+                            <li>Developed thermal-process simulations for Multi Jet Fusion 3D printing technology.</li>
+                            <li>Validated computational models against experimental materials-science benchmarks.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Research Assistant</h3>
+                        <p><strong>Universidad de Guadalajara (UdeG)</strong><br>Guadalajara, Mexico · <time datetime="2018-04">Apr 2018</time> – <time datetime="2020-06">Jun 2020</time></p>
+                        <ul>
+                            <li>Conducted <strong>computational physics</strong> research on complex systems and statistical mechanics.</li>
+                            <li>Developed <strong>Monte Carlo simulations</strong> for phase transition analysis in social dynamics models.</li>
+                        </ul>
+                    </article>
+                </div>
             </section>
 
-            <section class="card" data-section="education">
-                <span class="info-eyebrow">Education & Recognition</span>
-                <h1 class="info-title">PhD & HPC specialization</h1>
-                <p class="info-body">
-                    <strong>PhD in Applied Data Science & Artificial Intelligence</strong> (Nov 2023 - Present) · <a href="https://adsai.inginf.units.it/" target="_blank" rel="noopener noreferrer">University of Trieste (UniTS)</a> — Built distributed training/inference pipelines across multi-node GPU clusters (MPI/CUDA) for large seismic datasets; engineered a custom validation framework using bipartite optimization and weighted similarity scoring for high-fidelity event matching.<br /><br /><strong>Master in High Performance Computing</strong> (Sep 2023 - Aug 2024) · <a href="https://www.mhpc.it" target="_blank" rel="noopener noreferrer">Scuola Internazionale Superiore di Studi Avanzati (SISSA)</a> — Developed an end-to-end ML pipeline for real-time earthquake detection; architected HPC-optimized workflows with Transformers and CNNs to ingest continuous data streams at scale.<br /><br /><strong>Postgraduate Diploma in Quantitative Life Science</strong> (Sep 2022 - Aug 2023) · <a href="https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme" target="_blank" rel="noopener noreferrer">International Centre for Theoretical Physics (ICTP)</a>.<br /><br /><strong>BSc. Physics</strong> (Aug 2016 - Dec 2021) · <a href="https://www.cucei.udg.mx/carreras/fisica/" target="_blank" rel="noopener noreferrer">Universidad de Guadalajara (UdeG)</a> — Simulated complex social systems with 1D Ising spin models integrating Kawasaki and Schelling dynamics; quantified critical exponents ($z \u2248 2.48$, $\lambda \u2248 1.15$, $\theta \u2248 0.46$) and optimized simulations for ground-state transitions.
-                </p>
+            <section class="card" id="education" data-section="education">
+                <span class="info-eyebrow">Education</span>
+                <h2 class="info-title">Academic Background</h2>
+                <div class="info-body">
+                    <article>
+                        <h3><a href="https://adsai.inginf.units.it/" target="_blank" rel="noopener noreferrer">PhD in Applied Data Science &amp; Artificial Intelligence (ADSAI)</a></h3>
+                        <p><strong>Università degli Studi di Trieste (UniTS)</strong><br>Trieste, Italy · <time datetime="2023-11">Nov 2023</time> – Present</p>
+                        <p>Built <strong>distributed training/inference pipelines</strong> across <strong>multi-node GPU clusters (MPI/CUDA)</strong> for large seismic datasets; engineered a custom validation framework using <strong>bipartite optimization</strong> and weighted similarity scoring.</p>
+                        <p><strong>Expected graduation: <time datetime="2026-10">Oct 2026</time>.</strong> Completed concurrently with MHPC studies.</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://www.mhpc.it" target="_blank" rel="noopener noreferrer">Master in High Performance Computing (MHPC)</a></h3>
+                        <p><strong>Scuola Internazionale Superiore di Studi Avanzati (SISSA)</strong><br>Trieste, Italy · <time datetime="2023-09">Sep 2023</time> – <time datetime="2024-08">Aug 2024</time></p>
+                        <p>Developed an <strong>end-to-end ML pipeline</strong> for real-time earthquake detection; architected <strong>HPC-optimized workflows</strong> with <strong>Transformers and CNNs</strong> to ingest continuous data streams at scale.</p>
+                        <p><strong>Graduated with honors.</strong> Completed concurrently with PhD studies.</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme" target="_blank" rel="noopener noreferrer">Postgraduate Diploma in Quantitative Life Science (QLS)</a></h3>
+                        <p><strong>International Centre for Theoretical Physics (ICTP)</strong><br>Trieste, Italy · <time datetime="2022-09">Sep 2022</time> – <time datetime="2023-08">Aug 2023</time></p>
+                        <p>Studied <strong>Approximate Message Passing (AMP)</strong> for rank-one estimation in the spiked Wigner model; developed and evaluated a <strong>prior-independent scheduler</strong> for the Onsager correction term. Applied the method to unstructured and structured random-matrix noise, reproducing Bayes-optimal behavior in the standard model and identifying limitations for structured noise.</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://www.cucei.udg.mx/carreras/fisica/" target="_blank" rel="noopener noreferrer">BSc. Physics</a></h3>
+                        <p><strong>Universidad de Guadalajara (UdeG)</strong><br>Guadalajara, Mexico · <time datetime="2016-08">Aug 2016</time> – <time datetime="2021-12">Dec 2021</time></p>
+                        <p>Simulated complex social systems with <strong>1D Ising spin models</strong> integrating Kawasaki and Schelling dynamics; quantified critical exponents via <strong>finite-size scaling</strong> (z approximately 2.48, lambda approximately 1.15, theta approximately 0.46).</p>
+                        <p><strong>Graduated with postgraduate studies.</strong> Completed concurrently with BEng studies.</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://www.iteso.mx/" target="_blank" rel="noopener noreferrer">BEng. Nanotechnology — Coursework</a></h3>
+                        <p><strong>Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO)</strong><br>Guadalajara, Mexico · <time datetime="2016-08">Aug 2016</time> – <time datetime="2018-12">Dec 2018</time></p>
+                        <p><strong>Coursework</strong> concurrently with BSc studies.</p>
+                    </article>
+                </div>
             </section>
 
-            <section class="card" data-section="skills">
-                <span class="info-eyebrow">Core & Technical Skills</span>
-                <h1 class="info-title">HPC, data, and AI stack</h1>
-                <p class="info-body">
-                    <strong>Core Competencies:</strong> High Performance Computing (HPC), Big Data & Distributed Systems, Mathematical Modeling & Computational Physics, Physics-Informed AI & Scientific ML, Data Engineering & ETL Pipelines, Backend Architecture & Microservices, MLOps & Model Deployment, Parallel Algorithms & Optimization, API Design & Observability, Research-to-Production Delivery.<br /><br /><strong>Programming & Frameworks:</strong> Python (NumPy, SciPy, Pandas, PyTorch, TensorFlow), C/C++ (STL, Eigen), SQL (PostgreSQL, Oracle), JavaScript/TypeScript, Bash scripting. Deep learning: Transformers, CNNs, RNNs, GANs, Physics-Informed Neural Networks.<br /><br /><strong>Infrastructure & DevOps:</strong> Linux (RHEL, Ubuntu), Docker, SLURM, Git.<br /><br /><strong>HPC & Parallel Computing:</strong> MPI/MPICH, OpenMP, OpenACC, CUDA. Experience on CINECA (Galileo100, Ada Cloud, Leonardo), ICTP Argo cluster, and institutional HPC resources.<br /><br /><strong>Methodologies:</strong> Agile/Scrum, Test-Driven Development, Code Review, Technical Documentation, Scientific Writing.<br /><br /><strong>Soft Skills:</strong> Cross-functional collaboration, Technical mentorship, Stakeholder communication, Research translation, Problem decomposition, Self-directed learning.<br /><br /><strong>Languages:</strong> Spanish (native), English (fluent - C1), Italian (basic - A2), Japanese (conversational), Chinese (basic - A1).
-                </p>
+            <section class="card" id="skills" data-section="skills">
+                <span class="info-eyebrow">Technical Skills</span>
+                <h2 class="info-title">HPC, Data &amp; AI</h2>
+                <div class="info-body">
+                    <dl>
+                        <dt>Core</dt><dd>HPC, Big Data &amp; Distributed Systems, Mathematical Modeling, Physics-Informed AI, Scientific ML, Data Engineering, Backend Architecture, MLOps, Parallel Algorithms, API Design</dd>
+                        <dt>Programming</dt><dd>Python (NumPy, SciPy, Pandas, PyTorch, TensorFlow, CuPy, Dask), C/C++, SQL (PostgreSQL, Oracle), JavaScript/TypeScript, Advanced Bash (sed/regex, GNU Make)</dd>
+                        <dt>Deep Learning</dt><dd>Transformers, CNNs, RNNs, GANs, PINNs</dd>
+                        <dt>HPC</dt><dd>SLURM, MPI/MPICH, OpenMP, OpenACC, CUDA. Dynamic thread/task optimization (32+ cores/node). CINECA (Galileo100, Leonardo), ICTP Ulysses</dd>
+                        <dt>Seismology</dt><dd>SeisBench, NonLinLoc, PyOcto, REAL. Waveform processing, phase picking, station metadata, seismic catalogs</dd>
+                        <dt>Infrastructure</dt><dd>Linux, Docker, Git, CI/CD, environment management, job monitoring, error/output logging</dd>
+                        <dt>Methods</dt><dd>Pipeline orchestration, Hydra YAML, GNU Make, Agile/Scrum, TDD, Technical Documentation</dd>
+                    </dl>
+                </div>
             </section>
 
-            <section class="card" data-section="projects">
+            <section class="card" id="languages" data-section="languages">
+                <span class="info-eyebrow">Languages</span>
+                <h2 class="info-title">Language Proficiency</h2>
+                <div class="info-body"><ul>
+                    <li>Spanish (native)</li>
+                    <li>English (C1)</li>
+                    <li>Italian (A2)</li>
+                    <li>Japanese (conversational)</li>
+                    <li>Chinese (A1)</li>
+                </ul></div>
+            </section>
+
+            <section class="card" id="projects" data-section="projects">
                 <span class="info-eyebrow">Selected Projects</span>
-                <h1 class="info-title">Research-to-production systems</h1>
-                <p class="info-body">
-                    <strong>Event Matching & Validation Framework:</strong> Novel validation system using Hungarian algorithm-based bipartite optimization with custom weighted similarity metrics (location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV) with configurable matching thresholds. Open-source contribution supporting reproducible seismology research.<br /><br /><strong>Additive Manufacturing Thermal Simulator:</strong> High-fidelity finite element simulation of powder bed fusion processes. Validated against experimental thermal imaging data from HP's Multi Jet Fusion production line.<br /><br /><strong>Social Dynamics Simulation Engine:</strong> Monte Carlo framework for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics. Characterized critical exponents and phase transitions through finite-size scaling analysis.
-                </p>
+                <h2 class="info-title">Scientific Computing in Practice</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>Automated Seismic Data Processing Pipeline</h3>
+                        <p>End-to-end HPC pipeline for seismic event detection: waveform acquisition, ML-based phase picking (SeisBench), octree-based association (PyOcto), and 3D hypocenter location (NonLinLoc). Dynamic SLURM job generation with template-based configuration and GNU Make orchestration.</p>
+                    </article>
+                    <article>
+                        <h3>Event Matching &amp; Validation Framework</h3>
+                        <p>Novel validation system using <strong>Hungarian algorithm-based bipartite optimization</strong> with custom weighted similarity metrics (location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV). Open-source contribution for reproducible seismology research.</p>
+                    </article>
+                    <article>
+                        <h3>Additive Manufacturing Thermal Simulator</h3>
+                        <p>High-fidelity <strong>finite element simulation</strong> of powder bed fusion processes. Validated against experimental thermal imaging data from HP's Multi Jet Fusion production line.</p>
+                    </article>
+                    <article>
+                        <h3>Social Dynamics Simulation Engine</h3>
+                        <p><strong>Monte Carlo framework</strong> for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics. Characterized critical exponents via finite-size scaling.</p>
+                    </article>
+                </div>
             </section>
 
-            <section class="card" data-section="certifications">
-                <span class="info-eyebrow">Credentials</span>
-                <h1 class="info-title">Certifications & Awards</h1>
-                <p class="info-body">
-                    <strong>Academic Honors:</strong><br />• ICTP Postgraduate Diploma Programme Fellowship (2022-2023) — Competitive scholarship for advanced studies in quantitative sciences.<br />• MHPC Scholarship, SISSA (2023-2024) — Merit-based funding for the Master in High Performance Computing.<br /><br /><strong>Professional Certifications:</strong><br />• HPC Essentials for Scientists and Engineers, CINECA (2023) — Comprehensive training in HPC concepts, parallel programming, and performance optimization.
-                </p>
+            <section class="card" id="publications" data-section="publications">
+                <span class="info-eyebrow">Publications</span>
+                <h2 class="info-title">Published Work &amp; Manuscripts</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>Insights into a Deep Learning Workflow for Automatic Detection of Seismic Signals at Mount Etna Volcano</h3>
+                        <p>Carducci, A.; Cocina, O.; Sciotto, M.; Cannata, A.; Di Gioia, S.; Vuan, A.; Saraò, A.; <strong>Tanaka Hernández, K.</strong>; Sugan, M. <em>Seismological Research Letters</em>, <time datetime="2026">2026</time>. Published. DOI: <a href="https://doi.org/10.1785/0220250431" target="_blank" rel="noopener noreferrer">10.1785/0220250431</a>.</p>
+                    </article>
+                    <p class="publication-status"><strong>Unpublished / Forthcoming</strong></p>
+                    <article>
+                        <h3>Evaluating an AI-enabled HPC workflow for seismic monitoring in the Southeastern Alps</h3>
+                        <p><strong>Tanaka Hernández, K.</strong>; Münchmeyer, J.; Magrin, A.; Di Gioia, S.; Vuan, A.; Picozzi, M.; Rodriguez Garcia, A.; …; Sugan, M. <em>Manuscript in preparation.</em></p>
+                    </article>
+                    <article>
+                        <h3>Comparative Evaluation of Clustering Algorithms for Seismic Event Association: Assessing their suitability for reliable event association</h3>
+                        <p><strong>Tanaka Hernández, K.</strong>; Rodriguez Garcia, A.; Vuan, A. <em>Manuscript in preparation.</em></p>
+                    </article>
+                </div>
             </section>
 
-            <section class="card" data-section="contact">
+            <section class="card" id="conferences" data-section="conferences">
+                <span class="info-eyebrow">Conferences</span>
+                <h2 class="info-title">Conference Contributions</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>Performance assessment of Deep Learning picking models at Mount Etna volcano</h3>
+                        <p>Carducci, A.; Cocina, O.; Sciotto, M.; Cannata, A.; Di Gioia, S.; Vuan, A.; Saraò, A.; <strong>Tanaka Hernández, K.</strong>; Sugan, M. <em>EGU General Assembly 2026</em>, Vienna, Austria, <time datetime="2026-05-03">3</time>–<time datetime="2026-05-08">8 May 2026</time>. EGU26-11585. DOI: <a href="https://doi.org/10.5194/egusphere-egu26-11585" target="_blank" rel="noopener noreferrer">10.5194/egusphere-egu26-11585</a>.</p>
+                    </article>
+                    <article>
+                        <h3>Benchmark tests of Deep Learning pickers at Mount Etna volcano</h3>
+                        <p>Carducci, A.; Cocina, O.; Sciotto, M.; Cannata, A.; Di Gioia, S.; Vuan, A.; Saraò, A.; <strong>Tanaka Hernández, K.</strong>; Sugan, M. <em>GNGTS – Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS</em>, Udine, Italy, <time datetime="2026-02-10">10</time>–<time datetime="2026-02-13">13 February 2026</time>.</p>
+                    </article>
+                    <article>
+                        <h3>Artificial Intelligence (AI) and Machine Learning (ML) on Big Data seismology</h3>
+                        <p><strong>Tanaka Hernández, K.</strong>; Münchmeyer, J.; Magrin, A.; Di Gioia, S.; Rodriguez Garcia, A.; Sugan, M. <em>GNGTS – Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS</em>, Udine, Italy, <time datetime="2026-02-10">10</time>–<time datetime="2026-02-13">13 February 2026</time>.</p>
+                    </article>
+                    <article>
+                        <h3>Artificial Intelligence (AI) and Machine Learning (ML) on Big Data Seismology</h3>
+                        <p><strong>Tanaka Hernández, K.</strong> <em>24th Mexican International Conference on Artificial Intelligence (MICAI 2025) Doctoral Consortium</em>, Guanajuato, Mexico, <time datetime="2025-11-03">3</time>–<time datetime="2025-11-07">7 November 2025</time>.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card" id="datasets" data-section="datasets">
+                <span class="info-eyebrow">Datasets</span>
+                <h2 class="info-title">Published Research Data</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>Revised OGS Seismic Catalog for Northern Italy (2005–2024): Quality-Controlled, Homogeneous Dataset for Seismological and Machine Learning Applications</h3>
+                        <p>Magrin, A.; <strong>Tanaka Hernández, K.</strong>; Sugan, M. <em>Zenodo</em>, <time datetime="2026-08-26">26 August 2026</time>. Published dataset, version 1.0. DOI: <a href="https://doi.org/10.5281/zenodo.22106548" target="_blank" rel="noopener noreferrer">10.5281/zenodo.22106548</a>.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card" id="certifications" data-section="certifications">
+                <span class="info-eyebrow">Honors &amp; Awards</span>
+                <h2 class="info-title">Scholarships &amp; Recognition</h2>
+                <div class="info-body">
+                    <ul>
+                        <li><strong><a href="https://www.terabit-project.it/en/" target="_blank" rel="noopener noreferrer">TeRABIT Scholarship</a></strong> · OGS · <time datetime="2023">2023</time>–<time datetime="2024">2024</time> — HPC training and Earth-science research</li>
+                        <li><strong>Postgraduate Diploma Fellowship</strong> · ICTP · <time datetime="2022">2022</time>–<time datetime="2023">2023</time> — Competitive Theoretical Physics scholarship</li>
+                        <li><strong>3rd Place, National Poster Presentation Contest</strong> · HP · <time datetime="2020">2020</time> — Research poster competition</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="card" id="volunteering" data-section="volunteering">
+                <span class="info-eyebrow">Volunteering</span>
+                <h2 class="info-title">Community &amp; Science</h2>
+                <div class="info-body">
+                    <article>
+                        <h3>ISC High Performance · <a href="https://isc-hpc.com/program/student-volunteer-program/" target="_blank" rel="noopener noreferrer">Student Volunteer</a></h3>
+                        <p>Science and Technology · <time datetime="2025-06">Jun 2025</time></p>
+                        <p>Engaged with leading minds in high performance computing, including renowned scientists, early-career researchers, and representatives of organizations advancing HPC.</p>
+                    </article>
+                    <article>
+                        <h3>Université Grenoble Alpes (UGA) · Research Internship</h3>
+                        <p>Science and Technology · <time datetime="2025-04">Apr 2025</time> – <time datetime="2025-07">Jul 2025</time></p>
+                    </article>
+                    <article>
+                        <h3>Universidad de Guadalajara (UdeG), CUCEI · Science Outreach</h3>
+                        <p>Education · <time datetime="2017-01">Jan 2017</time> – <time datetime="2019-12">Dec 2019</time></p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/ndejalisco" target="_blank" rel="noopener noreferrer">Noche de las Estrellas</a> (2017, 2018, 2019)</li>
+                            <li><a href="https://www.facebook.com/circodelaciencia/" target="_blank" rel="noopener noreferrer">Circo de la Ciencia</a></li>
+                            <li>Others</li>
+                        </ul>
+                        <p>Presented experiments and explained scientific phenomena to encourage community engagement with science; answered questions from observers.</p>
+                    </article>
+                    <article>
+                        <h3>Hewlett-Packard (HP) · <a href="https://www.linkedin.com/posts/hp_hpproud-activity-6625803861640695808-o5_E" target="_blank" rel="noopener noreferrer">Hour of Code</a></h3>
+                        <p>Education · <time datetime="2020-01">Jan 2020</time></p>
+                        <p>Partnered with local schools to teach coding basics to young girls and underrepresented groups, helping inspire the next generation of reinventors.</p>
+                    </article>
+                    <article>
+                        <h3>Agencia Espacial Mexicana (AEM) · Student Volunteer</h3>
+                        <p>Science and Technology · <time datetime="2016-09">Sep 2016</time></p>
+                        <p>Assistant at the 67th International Astronautical Congress (IAC) 2016.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card" id="interests" data-section="interests">
+                <span class="info-eyebrow">Hobbies &amp; Interests</span>
+                <h2 class="info-title">Beyond Research</h2>
+                <div class="info-body"><ul>
+                    <li><strong>Resilience &amp; Well-being:</strong> Mindfulness, swimming, cycling, running, and gym training.</li>
+                    <li><strong>Creativity &amp; Innovation:</strong> Photography and research in biology, physics, mathematics, and computer science.</li>
+                    <li><strong>Learning &amp; Exploration:</strong> Traveling, Chinese, philosophy, financial literacy and personal investments.</li>
+                    <li><strong>Community Engagement:</strong> Science outreach, volunteering, and mentoring.</li>
+                </ul></div>
+            </section>
+
+            <section class="card" id="contact" data-section="contact">
                 <span class="info-eyebrow">Contact</span>
-                <h1 class="info-title">Ken Tanaka Hernández</h1>
-                <p class="info-body">
-                    <a href="mailto:kentanaka3@outlook.com">kentanaka3@outlook.com</a> · <a href="https://kentanaka3.github.io" target="_blank" rel="noopener noreferrer">kentanaka3.github.io</a> · <a href="https://www.linkedin.com/in/kentanaka3" target="_blank" rel="noopener noreferrer">linkedin.com/in/kentanaka3</a> · <a href="https://github.com/kentanaka3" target="_blank" rel="noopener noreferrer">github.com/kentanaka3</a><br />Guadalajara, Mexico
-                </p>
+                <h2 class="info-title">Get in Touch</h2>
+                <div class="info-body">
+                    <p>Ken Tanaka Hernández (田中健)<br>Guadalajara, Mexico</p>
+                    <p><a href="mailto:kentanaka3@outlook.com">kentanaka3@outlook.com</a> · <a href="https://kentanaka3.github.io" target="_blank" rel="noopener noreferrer">kentanaka3.github.io</a> · <a href="https://www.linkedin.com/in/kentanaka3" target="_blank" rel="noopener noreferrer">LinkedIn: kentanaka3</a> · <a href="https://github.com/kentanaka3" target="_blank" rel="noopener noreferrer">GitHub: kentanaka3</a></p>
+                    <p><a href="cv.pdf">Download CV (PDF)</a> · <a href="data/cv.json">Structured CV (JSON)</a></p>
+                </div>
             </section>
         </div>
         <canvas id="fishtank" aria-label="Animated fish background"></canvas>
-        <section class="info-panel is-hidden" role="region" aria-live="polite" aria-atomic="true">
-            <span class="info-eyebrow">Executive Summary</span>
-            <h1 class="info-title">Tech executive and problem solver</h1>
-            <p class="info-body">Multidisciplinary engineer with a PhD track in Applied Data Science & A.I., bridging Physics, Math, and Computer Science. Focused on translating complex research into scalable, high-performance products using HPC, Big Data, and AI, while guiding teams from hypothesis to production impact.</p>
-        </section>
+        <div class="info-panel is-hidden" role="region" aria-label="Selected CV section" aria-live="polite" aria-atomic="true">
+            <span class="info-eyebrow"></span>
+            <h2 class="info-title"></h2>
+            <div class="info-body"></div>
+        </div>
     </main>
-
+    <script src="web/js/index.js"></script>
 </body>
-<script src="web/js/index.js"></script>
 </html>

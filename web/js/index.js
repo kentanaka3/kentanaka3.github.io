@@ -279,8 +279,8 @@
 		const eyebrow = panel.querySelector(".info-eyebrow");
 		const title = panel.querySelector(".info-title");
 		const body = panel.querySelector(".info-body");
-		const hiddenSections = Array.from(document.querySelectorAll(".main-hidden [data-section]"));
-		const contentMap = hiddenSections.reduce((acc, section) => {
+		const sourceSections = Array.from(document.querySelectorAll(".cv-content [data-section]"));
+		const contentMap = sourceSections.reduce((acc, section) => {
 			const key = section.dataset.section;
 			if (!key) return acc;
 			acc[key] = {
@@ -295,7 +295,9 @@
 
 		const setActive = (target) => {
 			navLinks.forEach((link) => link.classList.remove("active"));
+			navLinks.forEach((link) => link.removeAttribute("aria-current"));
 			if (target) target.classList.add("active");
+			if (target) target.setAttribute("aria-current", "true");
 		};
 
 		const updatePanel = (sectionKey) => {
@@ -329,6 +331,7 @@
 			link.addEventListener("click", (event) => {
 				event.preventDefault();
 				const sectionKey = link.dataset.section;
+				if (!contentMap[sectionKey]) return;
 				const isSameSection = lastSection === sectionKey;
 				const isHidden = panel.classList.contains("is-hidden");
 				const shouldShow = !isSameSection || isHidden;
@@ -336,6 +339,7 @@
 				updatePanel(sectionKey);
 				togglePanel(shouldShow);
 				lastSection = sectionKey;
+				history.replaceState(null, "", link.hash);
 			});
 		});
 
@@ -347,8 +351,11 @@
 			setSidebarState(page.classList.contains("is-collapsed"));
 		}
 
-		setActive(navLinks[0]);
-		updatePanel(navLinks[0].dataset.section);
-		togglePanel(false);
-		lastSection = navLinks[0].dataset.section;
+		const initialLink = navLinks.find((link) => link.hash === location.hash) || navLinks[0];
+		setActive(initialLink);
+		updatePanel(initialLink.dataset.section);
+		togglePanel(Boolean(location.hash));
+		lastSection = initialLink.dataset.section;
+		page.classList.add("is-enhanced");
+		window.dispatchEvent(new Event("resize"));
 	})();

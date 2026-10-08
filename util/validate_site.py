@@ -1,21 +1,6 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env python3
 
-if [[ $# -gt 1 ]]; then
-    printf 'Usage: %s [--check]\n' "$0" >&2
-    exit 1
-fi
-case "${1:-}" in
-    ""|--check) ;;
-    *) printf 'Usage: %s [--check]\n' "$0" >&2; exit 1 ;;
-esac
-
-root_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
-cd "$root_dir"
-command -v python3 >/dev/null || { printf 'Python 3 is required for validation.\n' >&2; exit 1; }
-
-printf '%s\n' '==> Validating semantic HTML, structured data, and public resources...'
-python3 - <<'PY'
+import argparse
 import json
 import sys
 from collections import Counter
@@ -110,13 +95,14 @@ class SiteParser(HTMLParser):
                 self.sections[attrs["id"]]["text"].append(text)
 
 
-def validate():
+def validate(root_dir: Path) -> None:
     public_files = ("index.html", "web/css/index.css", "web/js/index.js", "cv.pdf", "web/img/fish.png", "data/cv.json", "llms.txt")
     for resource in public_files:
-        require(Path(resource).is_file() and Path(resource).stat().st_size > 0, f"Missing or empty public resource: {resource}")
-    cv = json.loads(Path("data/cv.json").read_text(encoding="utf-8"), object_pairs_hook=unique_object)
+        path = root_dir / resource
+        require(path.is_file() and path.stat().st_size > 0, f"Missing or empty public resource: {resource}")
+    cv = json.loads((root_dir / "data/cv.json").read_text(encoding="utf-8"), object_pairs_hook=unique_object)
     parser = SiteParser()
-    parser.feed(Path("index.html").read_text(encoding="utf-8"))
+    parser.feed((root_dir / "index.html").read_text(encoding="utf-8"))
     parser.close()
     require(not parser.stack, "HTML has unclosed tags")
     require(parser.counts["main"] == 1 and parser.counts["h1"] == 1, "Expected one main element and one H1")
@@ -150,7 +136,7 @@ def validate():
     for section_id, cv_key in sections.items():
         section = parser.sections[section_id]
         require(section["articles"] == len(cv[cv_key]), f"Incomplete CV section: {section_id}")
-        text = " ".join(" ".join(section["text"]).split())
+        text = " ".join("".join(section["text"]).split())
         for entry in cv[cv_key]:
             for field in ("employer", "institution", "name", "title", "description"):
                 if field in entry:
@@ -167,36 +153,24 @@ def validate():
     for link in parser.links:
         parsed = urlsplit(link)
         if not parsed.scheme and not parsed.netloc:
-            require(not parsed.path or Path(parsed.path).is_file(), f"Broken local link: {link}")
+            require(not parsed.path or (root_dir / parsed.path).is_file(), f"Broken local link: {link}")
             if parsed.fragment and not parsed.path:
                 require(parsed.fragment in parser.ids, f"Broken section anchor: {link}")
-    guide = Path("llms.txt").read_text(encoding="utf-8")
+    guide = (root_dir / "llms.txt").read_text(encoding="utf-8")
     require(guide.startswith("# " + personal["full_name"]), "LLM guide has an incorrect profile heading")
     require(url + "data/cv.json" in guide and url + "cv.pdf" in guide, "LLM guide must link to the JSON and PDF CV")
     print("[PASS] HTML structure, CV consistency, JSON-LD profile, dates, links, and LLM guide")
 
 
-try:
-    validate()
-except (ValueError, KeyError, TypeError, OSError) as error:
-    print(f"[FAIL] {error}", file=sys.stderr)
-    sys.exit(1)
-PY
+def main() -> int:
+    argparse.ArgumentParser(description="Validate the static CV, JSON-LD profile, and public resources.").parse_args()
+    try:
+        validate(Path(__file__).resolve().parent.parent)
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        print(f"[FAIL] {error}", file=sys.stderr)
+        return 1
+    return 0
 
-if [[ "${1:-}" == --check ]]; then
-    exit 0
-fi
 
-printf '%s\n' '==> Staging the public site in _site/...'
-if [[ -L _site || ( -e _site && ! -d _site ) ]]; then
-    printf 'Refusing to replace a symlink or non-directory at _site.\n' >&2
-    exit 1
-fi
-rm -rf -- _site
-mkdir -p _site/data _site/web/css _site/web/js _site/web/img
-cp index.html cv.pdf llms.txt _site/
-cp web/css/index.css _site/web/css/
-cp web/js/index.js _site/web/js/
-cp data/cv.json _site/data/
-cp web/img/fish.png _site/web/img/
-printf '%s\n' '[PASS] Public artifact prepared; no commit or push was performed.'
+if __name__ == "__main__":
+    sys.exit(main())
