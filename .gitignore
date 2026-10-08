@@ -1,0 +1,37 @@
+# macOS metadata
+.DS_Store
+
+# Repository-only source and LaTeX build output
+/doc/*.aux
+/doc/*.bbl
+/doc/*.bcf
+/doc/*.blg
+/doc/*.dvi
+/doc/*.log
+/doc/*.idx
+/doc/*.ilg
+/doc/*.ind
+/doc/*.lof
+/doc/*.lot
+/doc/*.nav
+/doc/*.out
+/doc/*.pdf
+/doc/*.run.xml
+/doc/*.snm
+/doc/*.toc
+/doc/*.synctex.gz
+/doc/*.vrb
+/doc/*.xdv
+/doc/*.fls
+/doc/*.fdb_latexmk
+/_site/
+
+# Local editor and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Statement of Purpose
+SoP/

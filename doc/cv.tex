@@ -1,0 +1,265 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,left=0.68in,right=0.68in,top=0.58in,bottom=0.58in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{CJKutf8}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{ink}{HTML}{000000}
+\definecolor{muted}{HTML}{5B6770}
+\definecolor{accent}{HTML}{E4007C}
+\definecolor{rule}{HTML}{D7E3E6}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Ken Tanaka Hernández},
+  pdftitle={Curriculum Vitae - Ken Tanaka Hernández}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}\begin{CJK}{UTF8}{min}田中健\end{CJK}}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\raggedbottom
+
+\titleformat{\section}
+  {\large\bfseries\color{ink}}
+  {}
+  {0pt}
+  {}
+  [\vspace{2pt}{\color{accent}\titlerule[0.7pt]}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\contactsep}{\hspace{0.55em}{\color{rule}\textbar}\hspace{0.55em}}
+
+\newenvironment{cvbullets}
+  {\begin{itemize}[
+      leftmargin=1.2em,
+      label=\textcolor{accent}{\footnotesize\textbullet},
+      itemsep=1.5pt,
+      topsep=2pt,
+      parsep=0pt,
+      partopsep=0pt
+    ]}
+  {\end{itemize}}
+
+\newcommand{\cventry}[4]{%
+  \vspace{2pt}%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{1.55in}@{}}
+    {\bfseries\color{ink}#1} & {\small\color{muted}#3}\\[-1pt]
+    {\bfseries\color{accent}#2} & {\small\color{muted}#4}
+  \end{tabularx}%
+  \vspace{-1pt}%
+}
+
+\newcommand{\cvproject}[2]{%
+  \vspace{2pt}%
+  {\bfseries\color{ink}#1}\par
+  \smallskip
+  {\color{muted}#2}\par
+}
+
+\newcommand{\skillrow}[2]{%
+  \begin{tabularx}{\textwidth}{@{}>{\bfseries\color{accent}}m{1.18in}>{\raggedright\arraybackslash}m{\dimexpr\textwidth-1.18in\relax}@{}}
+    #1 & #2
+  \end{tabularx}\par\vspace{3pt}%
+}
+
+\newcommand{\cvepigraph}[1]{%
+  \begin{flushright}
+    \itshape #1
+  \end{flushright}
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{25}{29}\selectfont\bfseries\color{ink}Ken Tanaka Hernández}\par
+  \vspace{3pt}
+  {\large\bfseries\color{accent}PhD Researcher \textbar{} HPC \& AI Engineer \textbar{} Scientific Computing}\par
+  \vspace{5pt}
+  {\small\color{muted}
+    Guadalajara, Mexico
+    \contactsep
+    \href{mailto:kentanaka3@outlook.com}{kentanaka3@outlook.com}
+    \contactsep
+    \href{https://kentanaka3.github.io}{kentanaka3.github.io}
+    \contactsep
+    \href{https://www.linkedin.com/in/kentanaka3}{LinkedIn: kentanaka3}
+    \contactsep
+    \href{https://github.com/kentanaka3}{GitHub: kentanaka3}
+  }\par
+\end{center}
+
+\cvepigraph{``We are a way for the cosmos to know itself.'' --- Carl Sagan, \textit{Cosmos: A Personal Journey} (1980)}
+
+\section*{Professional Summary}
+Researcher specializing in turning complex research into real-world products.
+Background across \textbf{physics, mathematics, and computer science}, building scalable platforms with
+\textbf{HPC, Big Data, and AI}. Architecting \textbf{distributed systems} and \textbf{parallel workflows}
+for high-throughput research and enterprise workloads. Translating academic research into production
+systems, roadmaps, and stakeholder value with expertise in \textbf{physics-informed AI} for trustworthy,
+explainable, and robust predictions.
+
+\section*{Experience}
+
+\cventry{Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) \& \mbox{Università degli Studi di Trieste (UniTS)}}{PhD Researcher}{Trieste, Italy}{Nov 2023 -- Present}
+\begin{cvbullets}
+  \item Developed automated seismic data processing pipelines on \textbf{HPC clusters} using \textbf{SLURM, MPI, and GPU parallelization}.
+  \item Implemented \textbf{ML-based earthquake detection} workflows integrating \textbf{SeisBench, PyOcto, and NonLinLoc}.
+  \item Created dynamic job submission systems that allocated workloads across compute nodes with \textbf{32+ cores/node}.
+  \item Designed reproducible scientific workflows using \textbf{GNU Make and Hydra} configuration frameworks.
+  \item Achieved \textbf{94\% detection accuracy} on production seismic workloads across Italy's northeastern national seismic network.
+\end{cvbullets}
+
+\cventry{ORACLE de México, SA de CV}{Software Developer II}{Guadalajara, Mexico}{Jul 2020 -- Aug 2022}
+\begin{cvbullets}
+  \item Architected and deployed a \textbf{production backend} for automated analytics through a customer-facing API.
+  \item Engineered automated patch recommendation workflows to streamline customer-facing diagnostic analysis.
+  \item Mentored junior developers and established \textbf{code review practices}.
+\end{cvbullets}
+
+\cventry{Hewlett Packard (HP) Labs}{Intern, Modeling \& Numerical Simulation}{Guadalajara, Mexico}{Jun 2019 -- Jun 2020}
+\begin{cvbullets}
+  \item Developed thermal-process simulations for Multi Jet Fusion 3D printing technology.
+  \item Validated computational models against experimental materials-science benchmarks.
+\end{cvbullets}
+
+\cventry{Universidad de Guadalajara (UdeG)}{Research Assistant}{Guadalajara, Mexico}{Apr 2018 -- Jun 2020}
+\begin{cvbullets}
+  \item Conducted \textbf{computational physics} research on complex systems and statistical mechanics.
+  \item Developed \textbf{Monte Carlo simulations} for phase transition analysis in social dynamics models.
+\end{cvbullets}
+
+\section*{Education}
+
+\cventry{Università degli Studi di Trieste (UniTS)}{\href{https://adsai.inginf.units.it/}{PhD in Applied Data Science \& Artificial Intelligence (ADSAI)}}{Trieste, Italy}{Nov 2023 -- Present}
+Built \textbf{distributed training/inference pipelines} across \textbf{multi-node GPU clusters (MPI/CUDA)} for large seismic
+datasets; engineered a custom validation framework using \textbf{bipartite optimization} and weighted similarity scoring.\newline\textbf{Expected graduation: Oct 2026.}\hspace*{\fill}Completed concurrently with MHPC studies.
+
+\cventry{Scuola Internazionale Superiore di Studi Avanzati (SISSA)}{\href{https://www.mhpc.it}{Master in High Performance Computing (MHPC)}}{Trieste, Italy}{Sep 2023 -- Aug 2024}
+Developed an \textbf{end-to-end ML pipeline} for real-time earthquake detection; architected \textbf{HPC-optimized workflows}
+with \textbf{Transformers and CNNs} to ingest continuous data streams at scale.\newline\textbf{Graduated with honors.}\hspace*{\fill}Completed concurrently with PhD studies.
+
+\cventry{International Centre for Theoretical Physics (ICTP)}{\href{https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme}{Postgraduate Diploma in Quantitative Life Science (QLS)}}{Trieste, Italy}{Sep 2022 -- Aug 2023}
+Studied \textbf{Approximate Message Passing (AMP)} for rank-one estimation in the spiked Wigner model; developed and evaluated a \textbf{prior-independent scheduler} for the Onsager correction term.
+Applied the method to unstructured and structured random-matrix noise, reproducing Bayes-optimal behavior in the standard model and identifying limitations for structured noise.
+
+\cventry{Universidad de Guadalajara (UdeG)}{\href{https://www.cucei.udg.mx/carreras/fisica/}{BSc. Physics}}{Guadalajara, Mexico}{Aug 2016 -- Dec 2021}
+Simulated complex social systems with \textbf{1D Ising spin models} integrating Kawasaki and Schelling dynamics;
+quantified critical exponents via \textbf{finite-size scaling} ($z \approx 2.48$, $\lambda \approx 1.15$, $\theta \approx 0.46$).\newline\textbf{Graduated with postgraduate studies.}\hspace*{\fill}Completed concurrently with BEng studies.
+
+\cventry{Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO)}{\href{https://www.iteso.mx/}{BEng. Nanotechnology}}{Guadalajara, Mexico}{Aug 2016 -- Dec 2018}
+\hspace*{\fill}\textbf{Coursework} concurrently with BSc studies.
+
+\section*{Technical Skills}
+\skillrow{Core}{\textbf{HPC, Big Data \& Distributed Systems}, Mathematical Modeling, \textbf{Physics-Informed AI}, Scientific ML, Data Engineering, Backend Architecture, MLOps, Parallel Algorithms, API Design}
+\skillrow{Programming}{\textbf{Python} (NumPy, SciPy, Pandas, PyTorch, TensorFlow, CuPy, Dask), \textbf{C/C++}, SQL (PostgreSQL, Oracle), JavaScript/TypeScript, Advanced Bash (sed/regex, GNU Make)}
+\skillrow{Deep Learning}{\textbf{Transformers, CNNs, RNNs, GANs, PINNs}}
+\skillrow{HPC}{\textbf{SLURM, MPI/MPICH, OpenMP, OpenACC, CUDA}. Dynamic thread/task optimization (32+ cores/node). CINECA (Galileo100, Leonardo), ICTP Ulysses}
+\skillrow{Seismology}{\textbf{SeisBench, NonLinLoc, PyOcto, REAL}. Waveform processing, phase picking, station metadata, seismic catalogs}
+\skillrow{Infrastructure}{\textbf{Linux, Docker, Git, CI/CD}, environment management, job monitoring, error/output logging}
+\skillrow{Methods}{Pipeline orchestration, \textbf{Hydra YAML, GNU Make}, Agile/Scrum, TDD, Technical Documentation}
+\skillrow{Languages}{Spanish (native), English (C1), Italian (A2), Japanese (conversational), Chinese (A1)}
+
+\section*{Selected Projects}
+\cvproject{Automated Seismic Data Processing Pipeline}{End-to-end HPC pipeline for seismic event detection: waveform acquisition, ML-based phase picking (SeisBench),
+octree-based association (PyOcto), and 3D hypocenter location (NonLinLoc). Dynamic SLURM job generation with
+template-based configuration and GNU Make orchestration.}
+
+\cvproject{Event Matching \& Validation Framework}{Novel validation system using \textbf{Hungarian algorithm-based bipartite optimization} with custom weighted similarity metrics
+(location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV).
+Open-source contribution for reproducible seismology research.}
+
+\cvproject{Additive Manufacturing Thermal Simulator}{High-fidelity \textbf{finite element simulation} of powder bed fusion processes. Validated against experimental thermal
+imaging data from HP's Multi Jet Fusion production line.}
+
+\cvproject{Social Dynamics Simulation Engine}{\textbf{Monte Carlo framework} for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models
+with Kawasaki-Schelling hybrid dynamics. Characterized critical exponents via finite-size scaling.}
+
+\section*{Publications}
+\cvproject{Insights into a Deep Learning Workflow for Automatic Detection of Seismic Signals at Mount Etna Volcano}{Carducci, A.; Cocina, O.; Sciotto, M.; Cannata, A.; Di Gioia, S.; Vuan, A.; Saraò, A.; \textbf{Tanaka Hernández, K.}; Sugan, M. \textit{Seismological Research Letters}, 2026. DOI: \href{https://doi.org/10.1785/0220250431}{10.1785/0220250431}.}
+
+\newpage
+\par\vspace{2pt}\begin{center}\textbf{\color{accent}Unpublished / Forthcoming}\end{center}
+
+\cvproject{Evaluating an AI-enabled HPC workflow for seismic monitoring in the Southeastern Alps}{\textbf{Tanaka Hernández, K.}; Münchmeyer, J.; Magrin, A.; Di Gioia, S.; Vuan, A.; Picozzi, M.; Rodriguez Garcia, A.; \ldots; Sugan, M. \textit{Manuscript in preparation}.}
+
+\cvproject{Comparative Evaluation of Clustering Algorithms for Seismic Event Association: Assessing their suitability for reliable event association}{\textbf{Tanaka Hernández, K.}, Rodriguez Garcia, A., Vuan, A. \textit{Manuscript in preparation}.}
+
+\section*{Conferences}
+\cvproject{Performance assessment of Deep Learning picking models at Mount Etna volcano}{Carducci, A., Cocina, O., Sciotto, M., Cannata, A., Di Gioia, S., Vuan, A., Saraò, A., \textbf{Tanaka Hernández, K.}, and Sugan, M.: \textit{EGU General Assembly 2026}, Vienna, Austria, 3--8 May 2026, EGU26-11585, DOI: \href{https://doi.org/10.5194/egusphere-egu26-11585}{10.5194/egusphere-egu26-11585}.}
+
+\cvproject{Benchmark tests of Deep Learning pickers at Mount Etna volcano}{Carducci, A.; Cocina, O.; Sciotto, M.; Cannata, A.; Di Gioia, S.; Vuan, A.; Saraò, A.; \textbf{Tanaka Hernández, K.}; Sugan, M. (2026). \textit{GNGTS -- Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS}, 10--13 February 2026, Udine, Italy.}
+
+\cvproject{Artificial Intelligence (AI) and Machine Learning (ML) on Big Data seismology}{\textbf{Tanaka Hernández, K.}; Münchmeyer, J.; Magrin, A.; Di Gioia, S.; Rodriguez Garcia, A.; Sugan, M. (2026). \textit{GNGTS -- Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS}, 10--13 February 2026, Udine, Italy.}
+
+\cvproject{Artificial Intelligence (AI) and Machine Learning (ML) on Big Data Seismology}{\textbf{Tanaka Hernández, K.} (2025). \textit{24th Mexican International Conference on Artificial Intelligence (MICAI 2025) Doctoral Consortium}, 3--7 November 2025, Guanajuato, Mexico.}
+
+\section*{Datasets}
+\cvproject{Revised OGS Seismic Catalog for Northern Italy (2005--2024) Using 1D Velocity Model with NonLinLoc:  Quality-controlled, homogeneous dataset for seismological and machine learning applications}{Magrin, A.; \textbf{Tanaka Hernández, K.}; Sugan, M. \textit{Zenodo}, forthcoming dataset.}
+
+
+\section*{Honors \& Awards}
+\begin{tabularx}{\textwidth}{@{}p{0.9in}Xr@{}}
+  \textbf{\color{accent}2023--2024} & \textbf{\href{https://www.terabit-project.it/en/}{TeRABIT Scholarship}} --- \textbf{HPC} training and Earth-science research & \textcolor{muted}{OGS}\\[3pt]
+  \textbf{\color{accent}2022--2023} & \textbf{Postgraduate Diploma Fellowship} --- Competitive \textbf{Theoretical Physics} scholarship & \textcolor{muted}{ICTP}\\[3pt]
+  \textbf{\color{accent}2020} & \textbf{3rd Place, National Poster Presentation Contest} --- Research poster competition & \textcolor{muted}{HP}\\[3pt]
+\end{tabularx}
+
+\section*{Volunteering}
+
+\cventry{ISC High Performance}{\href{https://isc-hpc.com/program/student-volunteer-program/}{Student Volunteer}}{Science and Technology}{Jun 2025}
+Engaged with leading minds in high performance computing, including renowned scientists, early-career researchers, and representatives of organizations advancing HPC.
+
+\cventry{Université Grenoble Alpes (UGA)}{Research Internship}{Science and Technology}{Apr 2025 -- Jul 2025}
+
+\cventry{Universidad de Guadalajara (UdeG), CUCEI}{Science Outreach:\begin{cvbullets}
+  \item \href{https://www.facebook.com/ndejalisco}{Noche de las Estrellas (2017, 2018, 2019)}
+  \item \href{https://www.facebook.com/circodelaciencia/}{Circo de la Ciencia}
+  \item Others
+\end{cvbullets}}{Education}{Jan 2017 -- Dec 2019}
+Presented experiments and explained scientific phenomena to encourage community engagement with science; answered questions from observers.
+
+\newpage
+\cventry{Hewlett-Packard (HP)}{\href{https://www.linkedin.com/posts/hp_hpproud-activity-6625803861640695808-o5_E}{Hour of Code}}{Education}{Jan 2020}
+Partnered with local schools to teach coding basics to young girls and underrepresented groups, helping inspire the next generation of reinventors.
+
+\cventry{Agencia Espacial Mexicana (AEM)}{Student Volunteer}{Science and Technology}{Sep 2016}
+Assistant at the 67th International Astronautical Congress (IAC) 2016.
+
+\section*{Hobbies \& Interests}
+\begin{cvbullets}
+  \item \textbf{Resilience \& Well-being:} Mindfulness, swimming, cycling, running, and gym training.
+  \item \textbf{Creativity \& Innovation:} Photography and research in biology, physics, mathematics, and computer science.
+  \item \textbf{Learning \& Exploration:} Traveling, Chinese, philosophy, financial literacy and personal investments.
+  \item \textbf{Community Engagement:} Science outreach, volunteering, and mentoring.
+\end{cvbullets}
+
+\vspace*{\fill}
+\begin{center}
+  \small\color{muted}Last updated: \today
+\end{center}
+\vspace*{\fill}
+
+\end{document}

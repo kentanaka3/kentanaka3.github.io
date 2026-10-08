@@ -266,7 +266,7 @@
 		tintedFishBitmap = tintFishSprite();
 		update();
 	};
-	fishBitmap.src = "img/fish.png";
+	fishBitmap.src = "web/img/fish.png";
 })();
 
 	(() => {

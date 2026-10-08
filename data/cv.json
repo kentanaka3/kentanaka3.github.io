@@ -1,0 +1,578 @@
+{
+  "metadata": {
+    "source_file": "doc/cv.tex",
+    "exported_on": "2026-09-30",
+    "date_format": "YYYY-MM for month precision; YYYY-MM-DD when a day is specified",
+    "notes": [
+      "Ongoing roles and studies have a null end_date.",
+      "This export is manually maintained and is not automatically synchronized with the source CV."
+    ]
+  },
+  "personal_information": {
+    "full_name": "Ken Tanaka Hernández",
+    "first_name": "Ken",
+    "last_name": "Tanaka Hernández",
+    "native_name": "田中健",
+    "headline": "PhD Researcher | HPC & AI Engineer | Scientific Computing",
+    "email": "kentanaka3@outlook.com",
+    "location": {
+      "city": "Guadalajara",
+      "country": "Mexico"
+    },
+    "website": "https://kentanaka3.github.io",
+    "linkedin": "https://www.linkedin.com/in/kentanaka3",
+    "github": "https://github.com/kentanaka3"
+  },
+  "professional_summary": "Researcher specializing in turning complex research into real-world products. Background across physics, mathematics, and computer science, building scalable platforms with HPC, Big Data, and AI. Architecting distributed systems and parallel workflows for high-throughput research and enterprise workloads. Translating academic research into production systems, roadmaps, and stakeholder value with expertise in physics-informed AI for trustworthy, explainable, and robust predictions.",
+  "work_experience": [
+    {
+      "employer": "Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) & Università degli Studi di Trieste (UniTS)",
+      "job_title": "PhD Researcher",
+      "location": {
+        "city": "Trieste",
+        "country": "Italy"
+      },
+      "start_date": "2023-11",
+      "end_date": null,
+      "is_current": true,
+      "responsibilities_and_achievements": [
+        "Developed automated seismic data processing pipelines on HPC clusters using SLURM, MPI, and GPU parallelization.",
+        "Implemented ML-based earthquake detection workflows integrating SeisBench, PyOcto, and NonLinLoc.",
+        "Created dynamic job submission systems that allocated workloads across compute nodes with 32+ cores/node.",
+        "Designed reproducible scientific workflows using GNU Make and Hydra configuration frameworks.",
+        "Achieved 94% detection accuracy on production seismic workloads across Italy's northeastern national seismic network."
+      ]
+    },
+    {
+      "employer": "ORACLE de México, SA de CV",
+      "job_title": "Software Developer II",
+      "location": {
+        "city": "Guadalajara",
+        "country": "Mexico"
+      },
+      "start_date": "2020-07",
+      "end_date": "2022-08",
+      "is_current": false,
+      "responsibilities_and_achievements": [
+        "Architected and deployed a production backend for automated analytics through a customer-facing API.",
+        "Engineered automated patch recommendation workflows to streamline customer-facing diagnostic analysis.",
+        "Mentored junior developers and established code review practices."
+      ]
+    },
+    {
+      "employer": "Hewlett Packard (HP) Labs",
+      "job_title": "Intern, Modeling & Numerical Simulation",
+      "location": {
+        "city": "Guadalajara",
+        "country": "Mexico"
+      },
+      "start_date": "2019-06",
+      "end_date": "2020-06",
+      "is_current": false,
+      "responsibilities_and_achievements": [
+        "Developed thermal-process simulations for Multi Jet Fusion 3D printing technology.",
+        "Validated computational models against experimental materials-science benchmarks."
+      ]
+    },
+    {
+      "employer": "Universidad de Guadalajara (UdeG)",
+      "job_title": "Research Assistant",
+      "location": {
+        "city": "Guadalajara",
+        "country": "Mexico"
+      },
+      "start_date": "2018-04",
+      "end_date": "2020-06",
+      "is_current": false,
+      "responsibilities_and_achievements": [
+        "Conducted computational physics research on complex systems and statistical mechanics.",
+        "Developed Monte Carlo simulations for phase transition analysis in social dynamics models."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Università degli Studi di Trieste (UniTS)",
+      "degree": "PhD",
+      "field_of_study": "Applied Data Science & Artificial Intelligence (ADSAI)",
+      "program_url": "https://adsai.inginf.units.it/",
+      "location": {
+        "city": "Trieste",
+        "country": "Italy"
+      },
+      "start_date": "2023-11",
+      "end_date": null,
+      "is_current": true,
+      "completion_status": "in_progress",
+      "expected_graduation_date": "2026-10",
+      "description": "Built distributed training/inference pipelines across multi-node GPU clusters (MPI/CUDA) for large seismic datasets; engineered a custom validation framework using bipartite optimization and weighted similarity scoring.",
+      "notes": [
+        "Completed concurrently with MHPC studies."
+      ]
+    },
+    {
+      "institution": "Scuola Internazionale Superiore di Studi Avanzati (SISSA)",
+      "degree": "Master",
+      "field_of_study": "High Performance Computing (MHPC)",
+      "program_url": "https://www.mhpc.it",
+      "location": {
+        "city": "Trieste",
+        "country": "Italy"
+      },
+      "start_date": "2023-09",
+      "end_date": "2024-08",
+      "is_current": false,
+      "completion_status": "graduated",
+      "honors": "Graduated with honors.",
+      "description": "Developed an end-to-end ML pipeline for real-time earthquake detection; architected HPC-optimized workflows with Transformers and CNNs to ingest continuous data streams at scale.",
+      "notes": [
+        "Completed concurrently with PhD studies."
+      ]
+    },
+    {
+      "institution": "International Centre for Theoretical Physics (ICTP)",
+      "degree": "Postgraduate Diploma",
+      "field_of_study": "Quantitative Life Science (QLS)",
+      "program_url": "https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme",
+      "location": {
+        "city": "Trieste",
+        "country": "Italy"
+      },
+      "start_date": "2022-09",
+      "end_date": "2023-08",
+      "is_current": false,
+      "description": "Studied Approximate Message Passing (AMP) for rank-one estimation in the spiked Wigner model; developed and evaluated a prior-independent scheduler for the Onsager correction term. Applied the method to unstructured and structured random-matrix noise, reproducing Bayes-optimal behavior in the standard model and identifying limitations for structured noise."
+    },
+    {
+      "institution": "Universidad de Guadalajara (UdeG)",
+      "degree": "BSc",
+      "field_of_study": "Physics",
+      "program_url": "https://www.cucei.udg.mx/carreras/fisica/",
+      "location": {
+        "city": "Guadalajara",
+        "country": "Mexico"
+      },
+      "start_date": "2016-08",
+      "end_date": "2021-12",
+      "is_current": false,
+      "completion_status": "graduated",
+      "description": "Simulated complex social systems with 1D Ising spin models integrating Kawasaki and Schelling dynamics; quantified critical exponents via finite-size scaling (z approximately 2.48, lambda approximately 1.15, theta approximately 0.46).",
+      "notes": [
+        "Graduated with postgraduate studies.",
+        "Completed concurrently with BEng studies."
+      ]
+    },
+    {
+      "institution": "Instituto Tecnológico y de Estudios Superiores de Occidente (ITESO)",
+      "degree": "BEng",
+      "field_of_study": "Nanotechnology",
+      "program_url": "https://www.iteso.mx/",
+      "location": {
+        "city": "Guadalajara",
+        "country": "Mexico"
+      },
+      "start_date": "2016-08",
+      "end_date": "2018-12",
+      "is_current": false,
+      "completion_status": "coursework_only",
+      "notes": [
+        "Coursework concurrently with BSc studies."
+      ]
+    }
+  ],
+  "technical_skills": [
+    {
+      "category": "Core",
+      "skills": [
+        "HPC",
+        "Big Data",
+        "Distributed Systems",
+        "Mathematical Modeling",
+        "Physics-Informed AI",
+        "Scientific ML",
+        "Data Engineering",
+        "Backend Architecture",
+        "MLOps",
+        "Parallel Algorithms",
+        "API Design"
+      ]
+    },
+    {
+      "category": "Programming",
+      "skills": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "Pandas",
+        "PyTorch",
+        "TensorFlow",
+        "CuPy",
+        "Dask",
+        "C",
+        "C++",
+        "SQL",
+        "PostgreSQL",
+        "Oracle",
+        "JavaScript",
+        "TypeScript",
+        "Advanced Bash",
+        "sed",
+        "regex",
+        "GNU Make"
+      ]
+    },
+    {
+      "category": "Deep Learning",
+      "skills": [
+        "Transformers",
+        "CNNs",
+        "RNNs",
+        "GANs",
+        "PINNs"
+      ]
+    },
+    {
+      "category": "HPC",
+      "skills": [
+        "SLURM",
+        "MPI",
+        "MPICH",
+        "OpenMP",
+        "OpenACC",
+        "CUDA",
+        "Dynamic thread/task optimization (32+ cores/node)",
+        "CINECA Galileo100",
+        "CINECA Leonardo",
+        "ICTP Ulysses"
+      ]
+    },
+    {
+      "category": "Seismology",
+      "skills": [
+        "SeisBench",
+        "NonLinLoc",
+        "PyOcto",
+        "REAL",
+        "Waveform processing",
+        "Phase picking",
+        "Station metadata",
+        "Seismic catalogs"
+      ]
+    },
+    {
+      "category": "Infrastructure",
+      "skills": [
+        "Linux",
+        "Docker",
+        "Git",
+        "CI/CD",
+        "Environment management",
+        "Job monitoring",
+        "Error/output logging"
+      ]
+    },
+    {
+      "category": "Methods",
+      "skills": [
+        "Pipeline orchestration",
+        "Hydra YAML",
+        "GNU Make",
+        "Agile/Scrum",
+        "TDD",
+        "Technical Documentation"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "proficiency": "native"
+    },
+    {
+      "language": "English",
+      "proficiency": "C1"
+    },
+    {
+      "language": "Italian",
+      "proficiency": "A2"
+    },
+    {
+      "language": "Japanese",
+      "proficiency": "conversational"
+    },
+    {
+      "language": "Chinese",
+      "proficiency": "A1"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Automated Seismic Data Processing Pipeline",
+      "description": "End-to-end HPC pipeline for seismic event detection: waveform acquisition, ML-based phase picking (SeisBench), octree-based association (PyOcto), and 3D hypocenter location (NonLinLoc). Dynamic SLURM job generation with template-based configuration and GNU Make orchestration."
+    },
+    {
+      "name": "Event Matching & Validation Framework",
+      "description": "Novel validation system using Hungarian algorithm-based bipartite optimization with custom weighted similarity metrics (location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV). Open-source contribution for reproducible seismology research."
+    },
+    {
+      "name": "Additive Manufacturing Thermal Simulator",
+      "description": "High-fidelity finite element simulation of powder bed fusion processes. Validated against experimental thermal imaging data from HP's Multi Jet Fusion production line."
+    },
+    {
+      "name": "Social Dynamics Simulation Engine",
+      "description": "Monte Carlo framework for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics. Characterized critical exponents via finite-size scaling."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Insights into a Deep Learning Workflow for Automatic Detection of Seismic Signals at Mount Etna Volcano",
+      "authors": [
+        "Carducci, A.",
+        "Cocina, O.",
+        "Sciotto, M.",
+        "Cannata, A.",
+        "Di Gioia, S.",
+        "Vuan, A.",
+        "Saraò, A.",
+        "Tanaka Hernández, K.",
+        "Sugan, M."
+      ],
+      "journal": "Seismological Research Letters",
+      "year": 2026,
+      "status": "published",
+      "doi": "10.1785/0220250431",
+      "url": "https://doi.org/10.1785/0220250431"
+    },
+    {
+      "title": "Evaluating an AI-enabled HPC workflow for seismic monitoring in the Southeastern Alps",
+      "authors": [
+        "Tanaka Hernández, K.",
+        "Münchmeyer, J.",
+        "Magrin, A.",
+        "Di Gioia, S.",
+        "Vuan, A.",
+        "Picozzi, M.",
+        "Rodriguez Garcia, A.",
+        "...",
+        "Sugan, M."
+      ],
+      "author_list_complete": false,
+      "status": "manuscript_in_preparation"
+    },
+    {
+      "title": "Comparative Evaluation of Clustering Algorithms for Seismic Event Association: Assessing their suitability for reliable event association",
+      "authors": [
+        "Tanaka Hernández, K.",
+        "Rodriguez Garcia, A.",
+        "Vuan, A."
+      ],
+      "status": "manuscript_in_preparation"
+    }
+  ],
+  "conferences": [
+    {
+      "title": "Performance assessment of Deep Learning picking models at Mount Etna volcano",
+      "authors": [
+        "Carducci, A.",
+        "Cocina, O.",
+        "Sciotto, M.",
+        "Cannata, A.",
+        "Di Gioia, S.",
+        "Vuan, A.",
+        "Saraò, A.",
+        "Tanaka Hernández, K.",
+        "Sugan, M."
+      ],
+      "event": "EGU General Assembly 2026",
+      "location": {
+        "city": "Vienna",
+        "country": "Austria"
+      },
+      "start_date": "2026-05-03",
+      "end_date": "2026-05-08",
+      "abstract_id": "EGU26-11585",
+      "doi": "10.5194/egusphere-egu26-11585",
+      "url": "https://doi.org/10.5194/egusphere-egu26-11585"
+    },
+    {
+      "title": "Benchmark tests of Deep Learning pickers at Mount Etna volcano",
+      "authors": [
+        "Carducci, A.",
+        "Cocina, O.",
+        "Sciotto, M.",
+        "Cannata, A.",
+        "Di Gioia, S.",
+        "Vuan, A.",
+        "Saraò, A.",
+        "Tanaka Hernández, K.",
+        "Sugan, M."
+      ],
+      "event": "GNGTS - Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS",
+      "location": {
+        "city": "Udine",
+        "country": "Italy"
+      },
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-13"
+    },
+    {
+      "title": "Artificial Intelligence (AI) and Machine Learning (ML) on Big Data seismology",
+      "authors": [
+        "Tanaka Hernández, K.",
+        "Münchmeyer, J.",
+        "Magrin, A.",
+        "Di Gioia, S.",
+        "Rodriguez Garcia, A.",
+        "Sugan, M."
+      ],
+      "event": "GNGTS - Gruppo Nazionale di Geofisica della Terra Solida, 44th National Conference of the GNGTS",
+      "location": {
+        "city": "Udine",
+        "country": "Italy"
+      },
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-13"
+    },
+    {
+      "title": "Artificial Intelligence (AI) and Machine Learning (ML) on Big Data Seismology",
+      "authors": [
+        "Tanaka Hernández, K."
+      ],
+      "event": "24th Mexican International Conference on Artificial Intelligence (MICAI 2025) Doctoral Consortium",
+      "location": {
+        "city": "Guanajuato",
+        "country": "Mexico"
+      },
+      "start_date": "2025-11-03",
+      "end_date": "2025-11-07"
+    }
+  ],
+  "datasets": [
+    {
+      "title": "Revised OGS Seismic Catalog for Northern Italy (2005-2024) Using 1D Velocity Model with NonLinLoc: Quality-controlled, homogeneous dataset for seismological and machine learning applications",
+      "authors": [
+        "Magrin, A.",
+        "Tanaka Hernández, K.",
+        "Sugan, M."
+      ],
+      "repository": "Zenodo",
+      "status": "forthcoming"
+    }
+  ],
+  "honors_and_awards": [
+    {
+      "title": "TeRABIT Scholarship",
+      "awarding_organization": "OGS",
+      "start_year": 2023,
+      "end_year": 2024,
+      "description": "HPC training and Earth-science research",
+      "url": "https://www.terabit-project.it/en/"
+    },
+    {
+      "title": "Postgraduate Diploma Fellowship",
+      "awarding_organization": "ICTP",
+      "start_year": 2022,
+      "end_year": 2023,
+      "description": "Competitive Theoretical Physics scholarship"
+    },
+    {
+      "title": "3rd Place, National Poster Presentation Contest",
+      "awarding_organization": "HP",
+      "year": 2020,
+      "description": "Research poster competition"
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "ISC High Performance",
+      "role": "Student Volunteer",
+      "category": "Science and Technology",
+      "start_date": "2025-06",
+      "end_date": "2025-06",
+      "url": "https://isc-hpc.com/program/student-volunteer-program/",
+      "description": "Engaged with leading minds in high performance computing, including renowned scientists, early-career researchers, and representatives of organizations advancing HPC."
+    },
+    {
+      "organization": "Université Grenoble Alpes (UGA)",
+      "role": "Research Internship",
+      "category": "Science and Technology",
+      "start_date": "2025-04",
+      "end_date": "2025-07"
+    },
+    {
+      "organization": "Universidad de Guadalajara (UdeG), CUCEI",
+      "role": "Science Outreach",
+      "category": "Education",
+      "start_date": "2017-01",
+      "end_date": "2019-12",
+      "description": "Presented experiments and explained scientific phenomena to encourage community engagement with science; answered questions from observers.",
+      "activities": [
+        {
+          "name": "Noche de las Estrellas",
+          "years": [2017, 2018, 2019],
+          "url": "https://www.facebook.com/ndejalisco"
+        },
+        {
+          "name": "Circo de la Ciencia",
+          "url": "https://www.facebook.com/circodelaciencia/"
+        },
+        {
+          "name": "Others"
+        }
+      ]
+    },
+    {
+      "organization": "Hewlett-Packard (HP)",
+      "role": "Hour of Code",
+      "category": "Education",
+      "start_date": "2020-01",
+      "end_date": "2020-01",
+      "url": "https://www.linkedin.com/posts/hp_hpproud-activity-6625803861640695808-o5_E",
+      "description": "Partnered with local schools to teach coding basics to young girls and underrepresented groups, helping inspire the next generation of reinventors."
+    },
+    {
+      "organization": "Agencia Espacial Mexicana (AEM)",
+      "role": "Student Volunteer",
+      "category": "Science and Technology",
+      "start_date": "2016-09",
+      "end_date": "2016-09",
+      "description": "Assistant at the 67th International Astronautical Congress (IAC) 2016."
+    }
+  ],
+  "hobbies_and_interests": [
+    {
+      "category": "Resilience & Well-being",
+      "interests": [
+        "Mindfulness",
+        "Swimming",
+        "Cycling",
+        "Running",
+        "Gym training"
+      ]
+    },
+    {
+      "category": "Creativity & Innovation",
+      "interests": [
+        "Photography",
+        "Research in biology, physics, mathematics, and computer science"
+      ]
+    },
+    {
+      "category": "Learning & Exploration",
+      "interests": [
+        "Traveling",
+        "Chinese",
+        "Philosophy",
+        "Financial literacy and personal investments"
+      ]
+    },
+    {
+      "category": "Community Engagement",
+      "interests": [
+        "Science outreach",
+        "Volunteering",
+        "Mentoring"
+      ]
+    }
+  ]
+}
