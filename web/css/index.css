@@ -114,6 +114,15 @@ body.is-collapsed .left-panel * {
     line-height: 1.2;
 }
 
+.site-logo {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+    align-self: center;
+}
+
 .left-panel nav ul {
     list-style-type: none;
     padding: 0;
