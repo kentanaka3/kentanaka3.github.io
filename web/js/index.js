@@ -12,7 +12,7 @@
 
 	// Tunable flocking constants. Keeping them grouped makes it easy to balance motion later.
 	const SPEED_BOOST = 2;
-	const FISH_COUNT = Math.max(100, Math.min(250, Math.floor((window.innerWidth * window.innerHeight) / 9000)));
+	const FISH_COUNT = Math.max(window.innerWidth <= 900 ? 50 : 100, Math.min(250, Math.floor((window.innerWidth * window.innerHeight) / 9000)));
 	const FISH_COLOR = "#00e468";
 	const NEIGHBOR_RADIUS = 100;
 	const SEPARATION_RADIUS = 25;
@@ -322,7 +322,8 @@
 			);
 			const icon = toggleButton.querySelector(".panel-toggle-icon");
 			if (icon) {
-				icon.textContent = isCollapsed ? "⟩" : "⟨";
+				const isMobile = window.innerWidth <= 900;
+				icon.textContent = isMobile ? (isCollapsed ? "▼" : "▲") : (isCollapsed ? "⟩" : "⟨");
 			}
 			window.dispatchEvent(new Event("resize"));
 		};
@@ -340,6 +341,10 @@
 				togglePanel(shouldShow);
 				lastSection = sectionKey;
 				history.replaceState(null, "", link.hash);
+				if (window.innerWidth <= 900 && shouldShow) {
+					setSidebarState(true);
+					panel.scrollIntoView({ behavior: "smooth", block: "start" });
+				}
 			});
 		});
 
@@ -351,11 +356,18 @@
 			setSidebarState(page.classList.contains("is-collapsed"));
 		}
 
-		const initialLink = navLinks.find((link) => link.hash === location.hash) || navLinks[0];
-		setActive(initialLink);
-		updatePanel(initialLink.dataset.section);
-		togglePanel(Boolean(location.hash));
-		lastSection = initialLink.dataset.section;
+		const initialLink = navLinks.find((link) => link.hash === location.hash);
+		if (initialLink) {
+			setActive(initialLink);
+			updatePanel(initialLink.dataset.section);
+			togglePanel(true);
+			lastSection = initialLink.dataset.section;
+		} else {
+			setActive(null);
+			updatePanel(navLinks[0].dataset.section);
+			togglePanel(false);
+			lastSection = null;
+		}
 		page.classList.add("is-enhanced");
 		window.dispatchEvent(new Event("resize"));
 	})();
