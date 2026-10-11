@@ -1,11 +1,8 @@
 # Ken Tanaka Hernández
 
-> PhD Researcher | HPC & AI Engineer | Scientific Computing
+> Computational & Mathematical Physicist | High-Performance Computing & AI
 
-Ken Tanaka Hernández (田中 健) is a researcher with a background in physics,
-mathematics, and computer science, building scalable platforms with HPC,
-Big Data, and AI. His work focuses on distributed systems, parallel scientific
-workflows, physics-informed AI, and automated seismic monitoring.
+Ken Tanaka Hernández (田中 健) is a computational and mathematical physicist specialized in theoretical and numerical modeling of complex stochastic dynamical systems across scales, uniting statistical physics, high-dimensional statistical inference, and large-scale scientific computing. He brings proven expertise in HPC, Big Data, and AI by architecting and deploying scalable, distributed systems for high-throughput research and enterprise workloads, spanning multi-node GPU Deep Learning pipelines on Tier-0 supercomputers (CINECA Leonardo).
 
 ## Primary sources
 
@@ -16,18 +13,37 @@ workflows, physics-informed AI, and automated seismic monitoring.
 ## Profile summary
 
 - Current role: PhD Researcher at Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) and Università degli Studi di Trieste (UniTS), Trieste, Italy, since November 2023.
-- Research: Automated HPC seismic processing with SLURM, MPI, GPU parallelization, SeisBench, PyOcto, and NonLinLoc; reproducible workflows using GNU Make and Hydra; 94% detection accuracy on production seismic workloads across Italy's northeastern national seismic network.
-- Previous experience: Software Developer II at ORACLE de México (July 2020–August 2022); modeling and numerical simulation internship at HP Labs (June 2019–June 2020); Research Assistant at Universidad de Guadalajara (April 2018–June 2020).
+- Research: Automated ML seismic processing on Italy's Tier-0 CINECA Leonardo supercomputer with dynamic job submission across 32+ cores/node using SLURM, MPI, and multi-node GPU parallelization; 94% accuracy on high-throughput production workloads.
+- Previous experience: Research Assistant at ICTP (April–August 2023); Software Developer II at ORACLE de México (July 2020–August 2022); modeling and numerical simulation internship at HP Labs (June 2019–June 2020); Research Assistant at Universidad de Guadalajara (April 2018–June 2020); Research Assistant at Universidad Autónoma de Nuevo León (UANL, May–July 2018).
 - Location: Guadalajara, Mexico; the current research role is based in Trieste, Italy.
 - Contact: kentanaka3@outlook.com.
 
+## Experience
+
+- PhD Researcher, Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) & Università degli Studi di Trieste (UniTS), November 2023–present. Architected and deployed automated ML seismic data processing pipelines on Italy's Tier-0 CINECA Leonardo supercomputer with dynamic job submission across 32+ cores/node using SLURM, MPI, and multi-node GPU parallelization, achieving 94% accuracy on high-throughput production workloads.
+- Research Assistant, International Centre for Theoretical Physics (ICTP), April–August 2023. Investigated rank-one estimation in the spiked Wigner model under Prof. Jean Barbier; developed a prior-independent scheduler for Approximate Message Passing (AMP) Onsager corrections to characterize Bayes-optimal signal recovery under structured noise.
+- Software Developer II, ORACLE de México, SA de CV, July 2020–August 2022. Architected and deployed a production backend and customer-facing API for automated analytics and diagnostic patch recommendation workflows; mentored junior developers and established engineering code review practices.
+- Intern, Modeling & Numerical Simulation, Hewlett Packard (HP) Labs, June 2019–June 2020. Developed thermal-process simulations for Multi Jet Fusion 3D printing technology; validated computational models against experimental materials-science benchmarks.
+- Research Assistant, Universidad de Guadalajara (UdeG), April 2018–June 2020. Conducted computational physics and Markov Chain Monte Carlo (MCMC) simulations for phase transition analysis and emergent phenomena in complex systems; researched the Totally Asymmetric Simple Exclusion Process (TASEP) and Global Magnetization Conserved Spin Exchange Dynamics under Dr. Soham Biswas.
+- Research Assistant, Universidad Autónoma de Nuevo León (UANL), May–July 2018. Researched computational algorithms for the local detection of community structures in complex networks under Dr. Satu Elisa Schaeffer.
+
 ## Education
 
-- PhD in Applied Data Science & Artificial Intelligence (ADSAI), UniTS, November 2023–present. In progress, with expected graduation in October 2026; concurrent with MHPC studies.
-- Master in High Performance Computing (MHPC), SISSA, September 2023–August 2024. Graduated with honors; concurrent with PhD studies.
-- Postgraduate Diploma in Quantitative Life Science (QLS), ICTP, September 2022–August 2023. Research on Approximate Message Passing, rank-one estimation, and a prior-independent scheduler for the Onsager correction term.
-- BSc. Physics, Universidad de Guadalajara, August 2016–December 2021. Graduated with postgraduate studies; research on Ising-based social dynamics and finite-size scaling.
+- PhD in Applied Data Science & Artificial Intelligence (ADSAI), UniTS, November 2023–present. In progress, with expected graduation in October 2026; concurrent with MHPC studies. Built distributed training/inference pipelines across multi-node GPU clusters (MPI/CUDA) for large seismic datasets; engineered a custom validation framework using bipartite optimization and weighted similarity scoring.
+- Master in High Performance Computing (MHPC), SISSA, September 2023–August 2024. Graduated with honors; concurrent with PhD studies. Developed an end-to-end ML pipeline for real-time earthquake detection; architected HPC-optimized workflows with Transformers and CNNs to ingest continuous data streams at scale.
+- Postgraduate Diploma in Quantitative Life Sciences (QLS), ICTP, September 2022–August 2023. Completed coursework in Universal Biology and Active Matter, Probability and Information Theory, Mathematical Economics and Game Theory, Computational Neuroscience, and Reinforcement Learning.
+- BSc. Physics, Universidad de Guadalajara, August 2016–December 2021. Graduated with postgraduate studies; concurrent with BEng studies. Simulated complex social systems with 1D Ising spin models integrating Kawasaki and Schelling dynamics; quantified critical exponents via finite-size scaling.
 - BEng. Nanotechnology studies, ITESO, August 2016–December 2018. Coursework only, not a completed degree; concurrent with BSc studies.
+
+## Selected projects
+
+- Automated Seismic Data Processing Pipeline: End-to-end HPC pipeline for seismic event detection: waveform acquisition, ML-based phase picking (SeisBench), octree-based association (PyOcto), and 3D hypocenter location (NonLinLoc). Dynamic SLURM job generation with template-based configuration and GNU Make orchestration.
+- Event Matching & Validation Framework: Novel validation system using Hungarian algorithm-based bipartite optimization with custom weighted similarity metrics (location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV). Open-source contribution for reproducible seismology research.
+- High-Dimensional Statistical Inference & Approximate Message Passing: Investigated rank-one estimation in spiked Wigner matrix models under Prof. Jean Barbier at ICTP. Engineered a prior-independent Onsager reaction scheduler for Approximate Message Passing (AMP), establishing recovery thresholds and analyzing fundamental algorithmic phase transitions under structured noise.
+- Additive Manufacturing Thermal Simulator: High-fidelity finite element simulation of powder bed fusion processes. Validated against experimental thermal imaging data from HP's Multi Jet Fusion production line.
+- Global Magnetization Conserved Spin Exchange Dynamics as a Social Dynamics Simulation Engine: Monte Carlo framework for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics and characterized critical exponents via finite-size scaling. Research supervised by Dr. Soham Biswas.
+- Totally Asymmetric Simple Exclusion Process (TASEP): Simulated established TASEP results and modeled the effects of a traffic light using Fortran and GNUPlot, under the supervision of Dr. Soham Biswas.
+- Local Detection of Community Structures: Introductory research during a Research Assistantship at Universidad Autónoma de Nuevo León (UANL), on local detection of community structures in complex networks under Dr. Satu Elisa Schaeffer.
 
 ## Research outputs
 
@@ -39,10 +55,10 @@ workflows, physics-informed AI, and automated seismic monitoring.
 
 ## Skills and languages
 
-- Expertise: HPC, Big Data, distributed systems, mathematical modeling, physics-informed AI, scientific ML, data engineering, backend architecture, MLOps, parallel algorithms, and API design.
-- Programming: Python (NumPy, SciPy, Pandas, PyTorch, TensorFlow, CuPy, Dask), C/C++, SQL (PostgreSQL, Oracle), JavaScript/TypeScript, and advanced Bash.
-- HPC: SLURM, MPI/MPICH, OpenMP, OpenACC, CUDA; CINECA Galileo100 and Leonardo; ICTP Ulysses.
-- Seismology: SeisBench, NonLinLoc, PyOcto, REAL, waveform processing, phase picking, station metadata, and seismic catalogs.
+- Theory & Modeling: Statistical Physics & Nonequilibrium Dynamics, High-Dimensional Inference, Complex Systems, Monte Carlo Methods, Approximate Message Passing (AMP).
+- HPC & Systems: Tier-0 Supercomputing (Leonardo), CUDA, MPI, OpenMP, SLURM, Multi-Node GPU Scaling, Distributed Computing, Parallel Optimization.
+- Programming & ML: Python (PyTorch, CuPy, Dask, NumPy, SciPy), C/C++, SQL (Oracle, PostgreSQL), Bash, Transformers, CNNs, PINNs.
+- Infrastructure: Linux, Docker, Git, CI/CD, Pipeline Orchestration (GNU Make, Hydra).
 - Languages: Spanish (native), English (C1), Italian (A2), Japanese (conversational), Chinese (A1).
 
 ## CV sections
@@ -68,6 +84,4 @@ workflows, physics-informed AI, and automated seismic monitoring.
 
 ## Context
 
-The portfolio also hosts a browser-only animated fish canvas. It is not an AI
-service or a source of biographical facts. The HTML, structured CV, and this
-guide are manually maintained and should remain consistent with the LaTeX CV.
+The portfolio also hosts a browser-only animated fish canvas. It is not an AI service or a source of biographical facts. The HTML, structured CV, and this guide are manually maintained and should remain consistent with the LaTeX CV.

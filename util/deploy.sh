@@ -32,5 +32,5 @@ cp index.html cv.pdf llms.txt _site/
 cp web/css/index.css _site/web/css/
 cp web/js/index.js _site/web/js/
 cp data/cv.json _site/data/
-cp web/img/fish.png _site/web/img/
+cp web/img/fish.png web/img/logo-hanko.png _site/web/img/
 printf '%s\n' '[PASS] Public artifact prepared; no commit or push was performed.'

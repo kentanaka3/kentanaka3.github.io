@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source_file": "doc/cv.tex",
-    "exported_on": "2026-10-08",
+    "exported_on": "2026-10-11",
     "date_format": "YYYY-MM for month precision; YYYY-MM-DD when a day is specified",
     "notes": [
       "Ongoing roles and studies have a null end_date.",
@@ -13,7 +13,7 @@
     "first_name": "Ken",
     "last_name": "Tanaka Hernández",
     "native_name": "田中健",
-    "headline": "PhD Researcher | HPC & AI Engineer | Scientific Computing",
+    "headline": "Computational & Mathematical Physicist | High-Performance Computing & AI",
     "email": "kentanaka3@outlook.com",
     "location": {
       "city": "Guadalajara",
@@ -23,7 +23,7 @@
     "linkedin": "https://www.linkedin.com/in/kentanaka3",
     "github": "https://github.com/kentanaka3"
   },
-  "professional_summary": "Researcher specializing in turning complex research into real-world products. Background across physics, mathematics, and computer science, building scalable platforms with HPC, Big Data, and AI. Architecting distributed systems and parallel workflows for high-throughput research and enterprise workloads. Translating academic research into production systems, roadmaps, and stakeholder value with expertise in physics-informed AI for trustworthy, explainable, and robust predictions.",
+  "professional_summary": "Computational and mathematical physicist specialized in theoretical and numerical modeling of complex stochastic dynamical systems across scales. Research foundation uniting statistical physics, high-dimensional statistical inference, and large-scale scientific computing. Proven expertise in HPC, Big Data, and AI by architecting and deploying scalable, distributed systems for high-throughput research and enterprise workloads, spanning multi-node GPU Deep Learning pipelines on Tier-0 supercomputers (CINECA Leonardo).",
   "work_experience": [
     {
       "employer": "Istituto Nazionale di Oceanografia e di Geofisica Sperimentale (OGS) & Università degli Studi di Trieste (UniTS)",
@@ -36,11 +36,21 @@
       "end_date": null,
       "is_current": true,
       "responsibilities_and_achievements": [
-        "Developed automated seismic data processing pipelines on HPC clusters using SLURM, MPI, and GPU parallelization.",
-        "Implemented ML-based earthquake detection workflows integrating SeisBench, PyOcto, and NonLinLoc.",
-        "Created dynamic job submission systems that allocated workloads across compute nodes with 32+ cores/node.",
-        "Designed reproducible scientific workflows using GNU Make and Hydra configuration frameworks.",
-        "Achieved 94% detection accuracy on production seismic workloads across Italy's northeastern national seismic network."
+        "Architected and deployed automated ML seismic data processing pipelines on Italy's Tier-0 CINECA Leonardo supercomputer with dynamic job submission across 32+ cores/node using SLURM, MPI, and multi-node GPU parallelization, achieving 94% accuracy on high-throughput production workloads."
+      ]
+    },
+    {
+      "employer": "International Centre for Theoretical Physics (ICTP)",
+      "job_title": "Research Assistant",
+      "location": {
+        "city": "Trieste",
+        "country": "Italy"
+      },
+      "start_date": "2023-04",
+      "end_date": "2023-08",
+      "is_current": false,
+      "responsibilities_and_achievements": [
+        "Investigated rank-one estimation in the spiked Wigner model under Prof. Jean Barbier; developed a prior-independent scheduler for Approximate Message Passing (AMP) Onsager corrections to characterize Bayes-optimal signal recovery under structured noise."
       ]
     },
     {
@@ -54,9 +64,8 @@
       "end_date": "2022-08",
       "is_current": false,
       "responsibilities_and_achievements": [
-        "Architected and deployed a production backend for automated analytics through a customer-facing API.",
-        "Engineered automated patch recommendation workflows to streamline customer-facing diagnostic analysis.",
-        "Mentored junior developers and established code review practices."
+        "Architected and deployed a production backend and customer-facing API for automated analytics and diagnostic patch recommendation workflows.",
+        "Mentored junior developers and established engineering code review practices."
       ]
     },
     {
@@ -85,8 +94,22 @@
       "end_date": "2020-06",
       "is_current": false,
       "responsibilities_and_achievements": [
-        "Conducted computational physics research on complex systems and statistical mechanics.",
-        "Developed Monte Carlo simulations for phase transition analysis in social dynamics models."
+        "Conducted computational physics and Markov Chain Monte Carlo (MCMC) simulations for phase transition analysis and emergent phenomena in complex systems.",
+        "Researched the Totally Asymmetric Simple Exclusion Process (TASEP) and Global Magnetization Conserved Spin Exchange Dynamics under Dr. Soham Biswas."
+      ]
+    },
+    {
+      "employer": "Universidad Autónoma de Nuevo León (UANL)",
+      "job_title": "Research Assistant",
+      "location": {
+        "city": "Monterrey",
+        "country": "Mexico"
+      },
+      "start_date": "2018-05",
+      "end_date": "2018-07",
+      "is_current": false,
+      "responsibilities_and_achievements": [
+        "Researched computational algorithms for the local detection of community structures in complex networks under Dr. Satu Elisa Schaeffer."
       ]
     }
   ],
@@ -132,7 +155,7 @@
     {
       "institution": "International Centre for Theoretical Physics (ICTP)",
       "degree": "Postgraduate Diploma",
-      "field_of_study": "Quantitative Life Science (QLS)",
+      "field_of_study": "Quantitative Life Sciences (QLS)",
       "program_url": "https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme",
       "location": {
         "city": "Trieste",
@@ -141,7 +164,7 @@
       "start_date": "2022-09",
       "end_date": "2023-08",
       "is_current": false,
-      "description": "Studied Approximate Message Passing (AMP) for rank-one estimation in the spiked Wigner model; developed and evaluated a prior-independent scheduler for the Onsager correction term. Applied the method to unstructured and structured random-matrix noise, reproducing Bayes-optimal behavior in the standard model and identifying limitations for structured noise."
+      "description": "Completed coursework in Universal Biology and Active Matter, Probability and Information Theory, Mathematical Economics and Game Theory, Computational Neuroscience, and Reinforcement Learning."
     },
     {
       "institution": "Universidad de Guadalajara (UdeG)",
@@ -182,81 +205,45 @@
   ],
   "technical_skills": [
     {
-      "category": "Core",
+      "category": "Theory & Modeling",
       "skills": [
-        "HPC",
-        "Big Data",
-        "Distributed Systems",
-        "Mathematical Modeling",
-        "Physics-Informed AI",
-        "Scientific ML",
-        "Data Engineering",
-        "Backend Architecture",
-        "MLOps",
-        "Parallel Algorithms",
-        "API Design"
+        "Statistical Physics & Nonequilibrium Dynamics",
+        "High-Dimensional Inference",
+        "Complex Systems",
+        "Monte Carlo Methods",
+        "Approximate Message Passing (AMP)"
       ]
     },
     {
-      "category": "Programming",
+      "category": "HPC & Systems",
+      "skills": [
+        "Tier-0 Supercomputing (Leonardo)",
+        "CUDA",
+        "MPI",
+        "OpenMP",
+        "SLURM",
+        "Multi-Node GPU Scaling",
+        "Distributed Computing",
+        "Parallel Optimization"
+      ]
+    },
+    {
+      "category": "Programming & ML",
       "skills": [
         "Python",
-        "NumPy",
-        "SciPy",
-        "Pandas",
         "PyTorch",
-        "TensorFlow",
         "CuPy",
         "Dask",
-        "C",
-        "C++",
+        "NumPy",
+        "SciPy",
+        "C/C++",
         "SQL",
-        "PostgreSQL",
         "Oracle",
-        "JavaScript",
-        "TypeScript",
-        "Advanced Bash",
-        "sed",
-        "regex",
-        "GNU Make"
-      ]
-    },
-    {
-      "category": "Deep Learning",
-      "skills": [
+        "PostgreSQL",
+        "Bash",
         "Transformers",
         "CNNs",
-        "RNNs",
-        "GANs",
         "PINNs"
-      ]
-    },
-    {
-      "category": "HPC",
-      "skills": [
-        "SLURM",
-        "MPI",
-        "MPICH",
-        "OpenMP",
-        "OpenACC",
-        "CUDA",
-        "Dynamic thread/task optimization (32+ cores/node)",
-        "CINECA Galileo100",
-        "CINECA Leonardo",
-        "ICTP Ulysses"
-      ]
-    },
-    {
-      "category": "Seismology",
-      "skills": [
-        "SeisBench",
-        "NonLinLoc",
-        "PyOcto",
-        "REAL",
-        "Waveform processing",
-        "Phase picking",
-        "Station metadata",
-        "Seismic catalogs"
       ]
     },
     {
@@ -266,20 +253,8 @@
         "Docker",
         "Git",
         "CI/CD",
-        "Environment management",
-        "Job monitoring",
-        "Error/output logging"
-      ]
-    },
-    {
-      "category": "Methods",
-      "skills": [
-        "Pipeline orchestration",
-        "Hydra YAML",
         "GNU Make",
-        "Agile/Scrum",
-        "TDD",
-        "Technical Documentation"
+        "Hydra"
       ]
     }
   ],
@@ -315,12 +290,24 @@
       "description": "Novel validation system using Hungarian algorithm-based bipartite optimization with custom weighted similarity metrics (location, magnitude, origin time). Enables rigorous comparison against authoritative catalogs (INGV). Open-source contribution for reproducible seismology research."
     },
     {
+      "name": "High-Dimensional Statistical Inference & Approximate Message Passing",
+      "description": "Investigated rank-one estimation in spiked Wigner matrix models under Prof. Jean Barbier at ICTP. Engineered a prior-independent Onsager reaction scheduler for Approximate Message Passing (AMP), establishing recovery thresholds and analyzing fundamental algorithmic phase transitions under structured noise."
+    },
+    {
       "name": "Additive Manufacturing Thermal Simulator",
       "description": "High-fidelity finite element simulation of powder bed fusion processes. Validated against experimental thermal imaging data from HP's Multi Jet Fusion production line."
     },
     {
-      "name": "Social Dynamics Simulation Engine",
-      "description": "Monte Carlo framework for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics. Characterized critical exponents via finite-size scaling."
+      "name": "Global Magnetization Conserved Spin Exchange Dynamics as a Social Dynamics Simulation Engine",
+      "description": "Monte Carlo framework for studying segregation and opinion dynamics in complex networks. Implemented Ising-based models with Kawasaki-Schelling hybrid dynamics and characterized critical exponents via finite-size scaling. Research supervised by Dr. Soham Biswas."
+    },
+    {
+      "name": "Totally Asymmetric Simple Exclusion Process (TASEP)",
+      "description": "Simulated established TASEP results and modeled the effects of a traffic light using Fortran and GNUPlot, under the supervision of Dr. Soham Biswas."
+    },
+    {
+      "name": "Local Detection of Community Structures",
+      "description": "Introductory research during a Research Assistantship at Universidad Autónoma de Nuevo León (UANL), on local detection of community structures in complex networks under Dr. Satu Elisa Schaeffer."
     }
   ],
   "publications": [

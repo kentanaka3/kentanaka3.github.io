@@ -1,0 +1,50 @@
+
+My career is centered at the intersection of mathematical physics, information
+theory, and large-scale scientific computing. I chose Physics to understand how
+collective order emerges from chaotic, noisy interactions, whether in physical
+particles, biological networks, or computational algorithms. Throughout my
+journey, my aim has been to act as a genuine bridge: translating physical
+intuition and mathematical rigor into scalable models that explain
+high-dimensional dynamics from first principles.
+
+I began my interdisciplinary academic foundation with Non-Equilibrium
+Statistical Physics: transport phenomena via the Totally Asymmetric Simple
+Exclusion Process (TASEP), and spin-exchange dynamics (conserved Ising,
+Kawasaki, and Schelling models) to formulate a theoretical basis for
+understanding complex stochastic dynamical systems such as Opinion Dynamics
+with Prof. Soham Biswas. I also explored computational methods for the local
+detection of community structures in complex networks with Prof. Satu Elisa
+Schaeffer.
+
+During my undergraduate years, eager to test theoretical knowledge against
+real-world applications, I joined R&D teams where I had the opportunity to lead
+computational and algorithmic optimization initiatives at world-class
+enterprises, such as Hewlett-Packard (HP) Labs and Oracle. I gained invaluable
+insights into the gap between academic formulations and real-world industrial
+deployment.
+
+As rewarding as my industry experience was, optimizing commercial workflows
+ultimately reignited my intellectual curiosity and explore the fundamental
+principles. I moved to Trieste, Italy to join the prestigious Quantitative Life
+Sciences (QLS) program at the International Centre for Theoretical Physics
+(ICTP) where, alongside the brightest minds, I explored the deep interplay
+between Universal Biology and Active Matter, Probability and Information
+Theory, Mathematical Economics and Game Theory, Computational Neuroscience, and
+Reinforcement Learning.
+Working under the guidance of Prof. Jean Barbier, I tackled high-dimensional
+statistical inference and rank-one estimation in the spiked Wigner model. I
+developed a prior-independent Onsager correction scheduler for Approximate
+Message Passing (AMP) algorithms, characterizing Bayes-optimal signal recovery
+thresholds and exposing fundamental algorithmic barriers under structured
+noise.
+
+To complement this theoretical core, I chose an unconventional, demanding,
+concurrent path by earning an honors Master in High Performance Computing
+(MHPC) at SISSA, while simultaneously pursuing my PhD in Applied Data Science
+and Artificial Intelligence (ADSAI) at the University of Trieste and OGS. This
+duality allowed me to architect and deploy, on Italy's flagship Tier-0 CINECA
+Leonardo supercomputer, distributed and scalable multi-node GPU Deep Learning
+pipelines (using MPI, CUDA, SLURM) for high-throughput scientific data
+analysis.
+
+

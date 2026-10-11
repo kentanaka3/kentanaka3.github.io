@@ -96,7 +96,7 @@ class SiteParser(HTMLParser):
 
 
 def validate(root_dir: Path) -> None:
-    public_files = ("index.html", "web/css/index.css", "web/js/index.js", "cv.pdf", "web/img/fish.png", "data/cv.json", "llms.txt")
+    public_files = ("index.html", "web/css/index.css", "web/js/index.js", "cv.pdf", "web/img/fish.png", "web/img/logo-hanko.png", "data/cv.json", "llms.txt")
     for resource in public_files:
         path = root_dir / resource
         require(path.is_file() and path.stat().st_size > 0, f"Missing or empty public resource: {resource}")
