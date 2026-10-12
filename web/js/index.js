@@ -6,7 +6,11 @@
 
 	// Core state containers used across the animation loop.
 	const fishes = [];
+	const ripples = [];
 	const cursor = { x: Number.MAX_VALUE, y: Number.MAX_VALUE };
+	let lastRippleX = -1000;
+	let lastRippleY = -1000;
+	let cursorRippleCountdown = 0;
 	let speedBoostCountdown = 200;
 	let speedBoost = 0;
 
@@ -22,6 +26,18 @@
 	const MIN_SPEED = 0.2;
 	const MAX_FORCE = 0.03;
 	const WANDER_FORCE = 0.01;
+
+	// Tunable ripple and wave constants. Adjust these to tweak Zen water dynamics.
+	const RIPPLE_SPEED = 0.35;           // Expansion speed in pixels per frame (~0.1 to 1.5)
+	const RIPPLE_INTERVAL = 270;         // Stationary pulse period in frames (270 frames @ 60fps = 4.5s)
+	const RIPPLE_INTERVAL_VARIANCE = 50; // Random jitter in pulse timing (+/- frames, ~0.8s)
+	const RIPPLE_ALPHA_DECAY = 0.002;    // Fade rate per frame (0.5 / 0.002 = 250 frames ≈ 4.1s lifespan)
+	const RIPPLE_INITIAL_ALPHA = 0.5;    // Peak starting opacity of the wave (0.1 to 1.0)
+	const RIPPLE_MAX_RADIUS = 85;        // Maximum radial reach of mouse ripples
+	const RIPPLE_RADIUS_VARIANCE = 15;   // Random variance (+/- px) in max radius between ripples
+	const RIPPLE_MOVE_THRESHOLD = 65;    // Min distance (px) mouse must travel before triggering a new wave
+	const RIPPLE_COLOR_OUTER = "0, 228, 104";  // RGB tuple for primary outer wave (emerald)
+	const RIPPLE_COLOR_INNER = "0, 212, 255";  // RGB tuple for harmonic inner wave (cyan)
 
 	let tankWidth = canvas.width;
 	let tankHeight = canvas.height;
@@ -206,14 +222,40 @@
 		speedBoost = SPEED_BOOST;
 	};
 
+	const addRipple = (x, y, maxRadius = RIPPLE_MAX_RADIUS) => {
+		const radiusJitter = (Math.random() * 2 - 1) * RIPPLE_RADIUS_VARIANCE;
+		ripples.push({
+			x,
+			y,
+			radius: 2,
+			maxRadius: Math.max(40, maxRadius + radiusJitter),
+			alpha: RIPPLE_INITIAL_ALPHA,
+			speed: RIPPLE_SPEED
+		});
+	};
+
+	const nextInterval = () => {
+		const jitter = Math.round((Math.random() * 2 - 1) * RIPPLE_INTERVAL_VARIANCE);
+		return Math.max(60, RIPPLE_INTERVAL + jitter);
+	};
+
 	const handlePointer = (event) => {
 		const rect = canvas.getBoundingClientRect();
-		cursor.x = event.clientX - rect.left;
-		cursor.y = event.clientY - rect.top;
+		const x = event.clientX - rect.left;
+		const y = event.clientY - rect.top;
+		cursor.x = x;
+		cursor.y = y;
+		if (py(x - lastRippleX, y - lastRippleY) > RIPPLE_MOVE_THRESHOLD) {
+			addRipple(x, y, RIPPLE_MAX_RADIUS);
+			lastRippleX = x;
+			lastRippleY = y;
+			cursorRippleCountdown = nextInterval();
+		}
 	};
 
 	const clearCursor = () => {
 		cursor.x = cursor.y = Number.MAX_VALUE;
+		lastRippleX = lastRippleY = -1000;
 	};
 
 	document.addEventListener("mousemove", handlePointer);
@@ -221,12 +263,52 @@
 	document.addEventListener("mousedown", activateSpeedBoost);
 
 	const update = () => {
+		// Emit concentric ripples at the mouse position periodically even when the mouse is still.
+		if (cursor.x < canvas.width && cursor.y < canvas.height && cursor.x >= 0 && cursor.y >= 0) {
+			cursorRippleCountdown--;
+			if (cursorRippleCountdown <= 0) {
+				addRipple(cursor.x, cursor.y, RIPPLE_MAX_RADIUS);
+				lastRippleX = cursor.x;
+				lastRippleY = cursor.y;
+				cursorRippleCountdown = nextInterval();
+			}
+		}
 		// Gradually spawn up to the target school size so the canvas does not stutter on load.
 		if (fishes.length < FISH_COUNT) {
 			fishes.push(new Fish());
 		}
 
 		context.clearRect(0, 0, canvas.width, canvas.height);
+
+		// Render expanding concentric wave ripples following the cursor.
+		for (let i = ripples.length - 1; i >= 0; i--) {
+			const r = ripples[i];
+			r.radius += r.speed;
+			r.alpha -= RIPPLE_ALPHA_DECAY;
+			if (r.alpha <= 0 || r.radius >= r.maxRadius) {
+				ripples.splice(i, 1);
+				continue;
+			}
+
+			context.save();
+			// Primary expanding wave ring
+			context.beginPath();
+			context.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
+			context.strokeStyle = `rgba(${RIPPLE_COLOR_OUTER}, ${r.alpha * 0.7})`;
+			context.lineWidth = 1.2;
+			context.stroke();
+
+			// Inner concentric harmonic ring
+			if (r.radius > 18) {
+				context.beginPath();
+				context.arc(r.x, r.y, r.radius - 16, 0, Math.PI * 2);
+				context.strokeStyle = `rgba(${RIPPLE_COLOR_INNER}, ${r.alpha * 0.4})`;
+				context.lineWidth = 0.8;
+				context.stroke();
+			}
+			context.restore();
+		}
+
 		for (let i = 0; i < fishes.length; i++) {
 			const fish = fishes[i];
 			fish.calc();
